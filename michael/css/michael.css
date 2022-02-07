@@ -12,8 +12,18 @@
 }
 
 .dropdown-item,
-.dropdown-menu {
+.dropdown-menu,
+.dropdown-toggle {
   color: #ffc107;
   background-color: #5d5fef;
+}
+
+.flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=michael.css.map */
