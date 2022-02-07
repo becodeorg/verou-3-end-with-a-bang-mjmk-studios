@@ -1,1 +1,19 @@
-/* No CSS *//*# sourceMappingURL=michael.css.map */
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navbar-custom {
+  background-color: #f56e00;
+}
+
+.dropdown-item,
+.dropdown-menu {
+  color: #ffc107;
+  background-color: #5d5fef;
+}
+/*# sourceMappingURL=michael.css.map */
