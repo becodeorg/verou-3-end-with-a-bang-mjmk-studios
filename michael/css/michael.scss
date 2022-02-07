@@ -1,4 +1,21 @@
+$iris-light: #a5a6f6;
+$iris-dark: #5d5fef;
+$orange-light: #ffc107;
+$orange-dark: #f56e00;
+$bg-dark: #222;
+
+
 .container {
     display: flex;
     justify-content: center;
+}
+
+.navbar-custom {
+    background-color: #f56e00;
+}
+
+.dropdown-item,
+.dropdown-menu {
+    color: #ffc107;
+    background-color: #5d5fef;
 }
