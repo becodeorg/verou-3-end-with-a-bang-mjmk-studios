@@ -21,9 +21,25 @@ body {
   width: auto;
 }
 
+.center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .mainTitle {
   h1 {
     color: $iris-light;
     text-shadow: 0px 5px $iris-dark;
+    font-size: 4rem;
+  }
+}
+
+.buttonGroup {
+  margin-top: 2rem;
+
+  li {
+    margin: 0 1rem;
   }
 }

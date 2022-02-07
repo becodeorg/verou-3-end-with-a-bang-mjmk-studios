@@ -15,8 +15,25 @@ body {
   width: auto;
 }
 
+.center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 .mainTitle h1 {
   color: #a5a6f6;
   text-shadow: 0px 5px #5d5fef;
+  font-size: 4rem;
+}
+
+.buttonGroup {
+  margin-top: 2rem;
+}
+
+.buttonGroup li {
+  margin: 0 1rem;
 }
 /*# sourceMappingURL=style.css.map */
