@@ -9,5 +9,12 @@
 body {
   background-color: #222;
   font-family: "Press Start 2P", cursive;
+  height: 100vh;
+  width: auto;
+}
+
+.mainTitle h1 {
+  color: #a5a6f6;
+  text-shadow: 0px 5px #5d5fef;
 }
 /*# sourceMappingURL=style.css.map */

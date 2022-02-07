@@ -15,4 +15,13 @@ $bg-dark: #222;
 body {
   background-color: $bg-dark;
   font-family: "Press Start 2P", cursive;
+  height: 100vh;
+  width: auto;
+}
+
+.mainTitle {
+  h1 {
+    color: $iris-light;
+    text-shadow: 0px 5px $iris-dark;
+  }
 }
