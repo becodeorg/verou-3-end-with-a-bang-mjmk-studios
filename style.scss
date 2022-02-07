@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+$iris-light: #a5a6f6;
+$iris-dark: #5d5fef;
+$orange-light: #ffc107;
+$orange-dark: #f56e00;
+$bg-dark: #222;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navcolor {
+  background-color: $iris-light;
+  color: $orange-dark;
+}
