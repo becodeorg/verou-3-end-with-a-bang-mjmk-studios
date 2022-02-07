@@ -1,6 +1,10 @@
 {
     "version": 3,
+<<<<<<< HEAD
+    "mappings": "AAAA,AAAA,CAAC,CAAA;EACG,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU;CACzB",
+=======
     "mappings": "",
+>>>>>>> 7b00db6dbd3d79ee151535e63476becd6313fd32
     "sources": [
         "koen.scss"
     ],
