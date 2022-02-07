@@ -6,8 +6,23 @@
 body{
     main{
         #boxBox{
-            .mainBox{
-                
+            background-color: #C0C0C0;
+            border: 1px solid black;
+            #windowsBox{
+                background-color: rgb(0, 9, 176);
+                margin: 1px;
+                p{
+                    color: white;
+                }
+            }
+            #contentBox{
+                .mainBox{
+                    border: 2px solid #C0C0C0;
+                    background-color: black;
+                    p{
+                        color: white;
+                    }
+                }
             }
         }
     }
