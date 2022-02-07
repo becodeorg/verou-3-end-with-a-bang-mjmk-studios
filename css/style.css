@@ -14,6 +14,26 @@ body {
   width: auto;
 }
 
+.btn-primary {
+  background-color: #5d5fef;
+  border-color: #5d5fef;
+}
+
+.btn-primary:hover {
+  background-color: #a5a6f6;
+  border-color: #a5a6f6;
+}
+
+.btn-secondary {
+  background-color: #f56e00;
+  border-color: #f56e00;
+}
+
+.btn-secondary:hover {
+  background-color: #ffc107;
+  border-color: #ffc107;
+}
+
 .center {
   position: fixed;
   top: 50%;

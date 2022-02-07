@@ -21,8 +21,23 @@ body {
 }
 
 .btn-primary {
-  $btn-link-color: $iris-light;
-  $btn-link-hover-color: $iris-dark;
+  background-color: $iris-dark;
+  border-color: $iris-dark;
+
+  &:hover {
+    background-color: $iris-light;
+    border-color: $iris-light;
+  }
+}
+
+.btn-secondary {
+  background-color: $orange-dark;
+  border-color: $orange-dark;
+
+  &:hover {
+    background-color: $orange-light;
+    border-color: $orange -light;
+  }
 }
 
 .center {
@@ -50,7 +65,7 @@ body {
   }
 }
 
-.floating { 
+.floating {
   animation-name: floating;
   animation-duration: 3s;
   animation-iteration-count: infinite;
@@ -60,7 +75,13 @@ body {
 }
 
 @keyframes floating {
-  0% { transform: translate(0,  0px); }
-  50%  { transform: translate(0, 15px); }
-  100%   { transform: translate(0, -0px); }   
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
 }
