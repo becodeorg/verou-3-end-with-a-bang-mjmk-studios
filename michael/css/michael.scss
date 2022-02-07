@@ -1,3 +1,6 @@
+
+
+
 $iris-light: #a5a6f6;
 $iris-dark: #5d5fef;
 $orange-light: #ffc107;
@@ -15,7 +18,13 @@ $bg-dark: #222;
 }
 
 .dropdown-item,
-.dropdown-menu {
+.dropdown-menu,
+.dropdown-toggle {
     color: #ffc107;
     background-color: #5d5fef;
+}
+
+.flex-container{
+    display: flex;
+    justify-content: center;
 }
