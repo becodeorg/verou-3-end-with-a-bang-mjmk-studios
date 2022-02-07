@@ -14,3 +14,7 @@ This is the readme file which will be updated later on.
 - Light-Orange: #FFC107
 - Dark-Orange: #F56E00
 - Dark-bg: #222
+
+## Font family
+
+- Press Start 2P - <https://fonts.google.com/specimen/Press+Start+2P#standard-styles>
