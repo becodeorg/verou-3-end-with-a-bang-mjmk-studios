@@ -1,6 +1,7 @@
 Create Becode MUD
 
     layout:
+        - instructions
         - weather box
         - room box
         - interaction display
@@ -11,3 +12,7 @@ Create Becode MUD
     rooms:
         - classroom front
         - classroom back
+        - elevator room
+        - Desk Erwin
+        - Break room
+        - (emergency exit)
