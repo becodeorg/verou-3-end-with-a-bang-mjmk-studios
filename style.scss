@@ -21,4 +21,11 @@
 .dark-background {
     background: rgb(34, 34, 34);
     background: radial-gradient(circle, rgba(34, 34, 34, 1) 0%, rgba(245, 110, 0, 1) 35%, rgba(255, 193, 7, 1) 100%);
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
