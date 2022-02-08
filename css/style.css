@@ -1,29 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+.btn-primary {
+  background-color: #5d5fef !important;
+  border-color: #5d5fef !important;
+}
+
+.btn-primary:hover {
+  background-color: #a5a6f6 !important;
+  border-color: #a5a6f6 !important;
+}
+
+.btn-secondary {
+  background-color: #f56e00 !important;
+  border-color: #f56e00 !important;
+}
+
+.btn-secondary:hover {
+  background-color: #ffc107 !important;
+  border-color: #ffc107 !important;
+}
+
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-.btn-primary {
-  background-color: #5d5fef;
-  border-color: #5d5fef;
-}
-
-.btn-primary:hover {
-  background-color: #a5a6f6;
-  border-color: #a5a6f6;
-}
-
-.btn-secondary {
-  background-color: #f56e00;
-  border-color: #f56e00;
-}
-
-.btn-secondary:hover {
-  background-color: #ffc107;
-  border-color: #ffc107;
 }
 
 body {
@@ -135,6 +135,7 @@ body {
 @media (min-width: 768px) {
   .mainTitle h1 {
     font-size: 2rem;
+    text-shadow: 0px 5hgjpx #5d5fef;
   }
   .buttonGroup {
     margin-top: 1.5rem;

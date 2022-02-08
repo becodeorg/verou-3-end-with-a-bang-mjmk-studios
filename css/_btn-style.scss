@@ -1,0 +1,21 @@
+@import "./variables";
+
+.btn-primary {
+  background-color: $iris-dark !important;
+  border-color: $iris-dark !important;
+
+  &:hover {
+    background-color: $iris-light !important;
+    border-color: $iris-light !important;
+  }
+}
+
+.btn-secondary {
+  background-color: $orange-dark !important;
+  border-color: $orange-dark !important;
+
+  &:hover {
+    background-color: $orange-light !important;
+    border-color: $orange-light !important;
+  }
+}
