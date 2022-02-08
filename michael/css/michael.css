@@ -12,13 +12,35 @@
 }
 
 .dropdown-item,
-.dropdown-menu,
-.dropdown-toggle {
+.dropdown-toggle,
+.nav-bar-toggler-icon {
   color: #ffc107;
-  font-family: 'Press Start 2P', cursive;
+  background-color: #f56e00;
 }
 
 .flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dropdown-menu {
+  background-color: #ffc107;
+}
+
+.form {
+  width: 100%;
+  overflow: hidden;
+}
+
+input {
+  width: 100%;
+}
+
+.button-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
