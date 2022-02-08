@@ -52,6 +52,8 @@ body{
                 }
                 #roomBox{
                     height: 260px;
+                    display: flex;
+                    flex-direction: column-reverse;
                 }
                 #actionBox{
                     height: 70px;
@@ -78,5 +80,8 @@ body{
                 }
             }
         }
+    }
+    .hint{
+        color: green;
     }
 }
