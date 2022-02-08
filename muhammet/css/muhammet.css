@@ -1,4 +1,18 @@
 @import url("../../css/style.css");
+.title {
+  margin-top: 3rem;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.description {
+  color: whitesmoke;
+}
+
+.description li {
+  list-style-type: none;
+}
+
 .keyboardMap {
   margin-top: 3rem;
 }
