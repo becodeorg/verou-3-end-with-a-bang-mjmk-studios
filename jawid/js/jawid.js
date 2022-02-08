@@ -5,11 +5,11 @@ const createDiv = (className) => {
   return newDiv;
 };
 // create h1 function
-const createH1 = (className, h1Content) => {
-  const newH1 = document.createElement("h1");
-  newH1.className = className;
-  newH1.innerText = h1Content;
-  return newH1;
+const createH2 = (className, h2Content) => {
+  const newH2 = document.createElement("h2");
+  newH2.className = className;
+  newH2.innerText = h2Content;
+  return newH2;
 };
 // create paragraph function
 const createP = (className, pContent) => {
@@ -19,7 +19,11 @@ const createP = (className, pContent) => {
   return newP;
 };
 
-// create main container
-
-const container = createDiv("container");
-document.body.append(container);
+const songs = [
+  {
+    songImg: "../images/te-nguyen-Wt7XT1R6sjU-unsplash.jpg",
+    title: "dfsqf",
+    singer: "fsqdfsd",
+    description: "fdsqfdsfq",
+  },
+];
