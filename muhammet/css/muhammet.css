@@ -1,6 +1,10 @@
 @import url("../../css/style.css");
+body {
+  max-height: 100vh;
+}
+
 .title {
-  margin-top: 3rem;
+  padding-top: 3rem;
   color: whitesmoke;
   text-align: center;
 }
@@ -14,7 +18,7 @@
 }
 
 .keyboardMap {
-  margin-top: 3rem;
+  padding-top: 3rem;
 }
 
 .keyboardMap img {
