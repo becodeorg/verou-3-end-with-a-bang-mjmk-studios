@@ -6,30 +6,64 @@
           box-sizing: border-box;
 }
 
-@media (min-width: 992px) {
-  body {
-    background-color: #222 !important;
-    max-width: 80vw;
-    margin: 0 auto;
-    height: 100vh;
-    width: auto;
-  }
-  .btn-primary {
-    background-color: #5d5fef;
-    border-color: #5d5fef;
-  }
-  .btn-primary:hover {
-    background-color: #a5a6f6;
-    border-color: #a5a6f6;
-  }
-  .btn-secondary {
-    background-color: #f56e00;
-    border-color: #f56e00;
-  }
-  .btn-secondary:hover {
-    background-color: #ffc107;
-    border-color: #ffc107;
-  }
+.btn-primary {
+  background-color: #5d5fef;
+  border-color: #5d5fef;
+}
+
+.btn-primary:hover {
+  background-color: #a5a6f6;
+  border-color: #a5a6f6;
+}
+
+.btn-secondary {
+  background-color: #f56e00;
+  border-color: #f56e00;
+}
+
+.btn-secondary:hover {
+  background-color: #ffc107;
+  border-color: #ffc107;
+}
+
+body {
+  background-color: #222 !important;
+  max-width: 80vw;
+  margin: 0 auto;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  height: 100vh;
+  width: auto;
+}
+
+.mainTitle h1 {
+  color: #a5a6f6;
+  text-shadow: 0px 2px #5d5fef;
+  font-size: 1.5rem;
+  font-family: "Press Start 2P", cursive;
+  margin: 1rem 0.5rem;
+  text-align: center;
+}
+
+.buttonGroup {
+  margin-top: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.buttonGroup li {
+  margin: 0 1rem;
+  list-style-type: none;
+  margin: 0.5rem 0;
+}
+
+.buttonGroup li a img {
+  height: 100px;
+  width: auto;
+}
+
+@media (min-width: 576px) {
   .center {
     position: fixed;
     top: 50%;
@@ -37,18 +71,12 @@
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
   }
-  .mainTitle h1 {
-    color: #a5a6f6;
-    text-shadow: 0px 5px #5d5fef;
-    font-size: 4rem;
-    font-family: "Press Start 2P", cursive;
-  }
   .buttonGroup {
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
-  .buttonGroup li {
-    margin: 0 1rem;
-    list-style-type: none;
+  .buttonGroup li a img {
+    height: 100px;
+    width: auto;
   }
   .floating {
     -webkit-animation-name: floating;
@@ -59,7 +87,6 @@
             animation-iteration-count: infinite;
     -webkit-animation-timing-function: ease-in-out;
             animation-timing-function: ease-in-out;
-    margin-left: 30px;
     margin-top: 5px;
   }
   @-webkit-keyframes floating {
@@ -89,6 +116,30 @@
       -webkit-transform: translate(0, 0px);
               transform: translate(0, 0px);
     }
+  }
+}
+
+@media (min-width: 768px) {
+  .mainTitle h1 {
+    font-size: 2rem;
+  }
+  .buttonGroup {
+    margin-top: 1.5rem;
+  }
+  .buttonGroup li a img {
+    height: 125px;
+  }
+}
+
+@media (min-width: 992px) {
+  .mainTitle h1 {
+    font-size: 3rem;
+  }
+  .buttonGroup {
+    margin-top: 2rem;
+  }
+  .buttonGroup li a img {
+    height: 150px;
   }
 }
 /*# sourceMappingURL=style.css.map */
