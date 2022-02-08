@@ -1,2 +1,9 @@
 @import url("../../css/style.css");
+.keyboardMap {
+  margin-top: 3rem;
+}
+
+.keyboardMap img {
+  max-width: 100%;
+}
 /*# sourceMappingURL=muhammet.css.map */

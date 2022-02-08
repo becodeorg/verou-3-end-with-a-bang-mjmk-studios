@@ -5,12 +5,25 @@
           box-sizing: border-box;
 }
 
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #018281;
+}
+
 body main #boxBox {
   background-color: #C0C0C0;
   border: 1px solid black;
+  margin: 2px;
 }
 
 body main #boxBox #windowsBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: #0009b0;
   margin: 1px;
 }
@@ -19,12 +32,69 @@ body main #boxBox #windowsBox p {
   color: white;
 }
 
+body main #boxBox #windowsBox #windowsButtons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body main #boxBox #windowsBox #windowsButtons .button {
+  display: block;
+  margin: 1px;
+  width: 14px;
+  height: 14px;
+  background-color: #C0C0C0;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  font-family: sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+}
+
 body main #boxBox #contentBox .mainBox {
   border: 2px solid #C0C0C0;
   background-color: black;
+  overflow: scroll;
 }
 
 body main #boxBox #contentBox .mainBox p {
   color: white;
+}
+
+body main #boxBox #contentBox #roomBox {
+  height: 260px;
+}
+
+body main #boxBox #contentBox #actionBox {
+  height: 70px;
+}
+
+body main #boxBox #contentBox #inputBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body main #boxBox #contentBox #inputBox input {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+body main #boxBox #contentBox #inputBox .button {
+  display: block;
+  margin: 1px;
+  background-color: #C0C0C0;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  font-family: sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
 }
 /*# sourceMappingURL=koen.css.map */

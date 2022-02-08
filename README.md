@@ -1,6 +1,6 @@
-# End with a bang! - MJMK Studios
+# End with a bang! - MKMJ Studios
 
-This is the readme file which will be updated later on.
+A place where you relax, chill and procrastinate. Play games, listen to music, read some manga or ...
 
 ## Useful links
 
