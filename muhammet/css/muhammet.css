@@ -1,2 +1,185 @@
-@import url("../../css/style.css");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+.btn-primary {
+  background-color: #5d5fef !important;
+  border-color: #5d5fef !important;
+}
+
+.btn-primary:hover {
+  background-color: #a5a6f6 !important;
+  border-color: #a5a6f6 !important;
+}
+
+.btn-secondary {
+  background-color: #f56e00 !important;
+  border-color: #f56e00 !important;
+}
+
+.btn-secondary:hover {
+  background-color: #ffc107 !important;
+  border-color: #ffc107 !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #222 !important;
+  max-width: 80vw;
+  margin: 0 auto;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  height: 100vh;
+  width: auto;
+}
+
+.mainTitle h1 {
+  color: #a5a6f6;
+  text-shadow: 0px 2px #5d5fef;
+  font-size: 1.5rem;
+  font-family: "Press Start 2P", cursive;
+  margin: 1rem 0.5rem;
+  text-align: center;
+}
+
+.buttonGroup {
+  margin-top: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.buttonGroup li {
+  margin: 0 1rem;
+  list-style-type: none;
+  margin: 0.5rem 0;
+}
+
+.buttonGroup li a img {
+  height: 100px;
+  width: auto;
+}
+
+.footer {
+  background-color: #5d5fef;
+}
+
+.footer p {
+  margin-top: 1rem;
+  color: whitesmoke;
+}
+
+.footer p a {
+  color: #ffc107;
+}
+
+@media (min-width: 576px) {
+  .center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .buttonGroup {
+    margin-top: 1rem;
+  }
+  .buttonGroup li a img {
+    height: 100px;
+    width: auto;
+  }
+  .floating {
+    -webkit-animation-name: floating;
+            animation-name: floating;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    margin-top: 5px;
+  }
+  @-webkit-keyframes floating {
+    0% {
+      -webkit-transform: translate(0, 0px);
+              transform: translate(0, 0px);
+    }
+    50% {
+      -webkit-transform: translate(0, 15px);
+              transform: translate(0, 15px);
+    }
+    100% {
+      -webkit-transform: translate(0, 0px);
+              transform: translate(0, 0px);
+    }
+  }
+  @keyframes floating {
+    0% {
+      -webkit-transform: translate(0, 0px);
+              transform: translate(0, 0px);
+    }
+    50% {
+      -webkit-transform: translate(0, 15px);
+              transform: translate(0, 15px);
+    }
+    100% {
+      -webkit-transform: translate(0, 0px);
+              transform: translate(0, 0px);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .mainTitle h1 {
+    font-size: 2rem;
+    text-shadow: 0px 5hgjpx #5d5fef;
+  }
+  .buttonGroup {
+    margin-top: 1.5rem;
+  }
+  .buttonGroup li a img {
+    height: 125px;
+  }
+}
+
+@media (min-width: 992px) {
+  .mainTitle h1 {
+    font-size: 3rem;
+  }
+  .buttonGroup {
+    margin-top: 2rem;
+  }
+  .buttonGroup li a img {
+    height: 150px;
+  }
+}
+
+body {
+  max-height: 100vh;
+}
+
+.title {
+  padding-top: 3rem;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.description {
+  color: whitesmoke;
+}
+
+.description li {
+  list-style-type: none;
+}
+
+.keyboardMap {
+  padding-top: 3rem;
+}
+
+.keyboardMap img {
+  max-width: 100%;
+}
 /*# sourceMappingURL=muhammet.css.map */

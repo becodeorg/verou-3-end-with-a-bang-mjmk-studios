@@ -1,35 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
-
-$iris-light: #a5a6f6;
-$iris-dark: #5d5fef;
-$orange-light: #ffc107;
-$orange-dark: #f56e00;
-$bg-dark: #222;
+@import "./variables";
+@import "./btn-style";
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-.btn-primary {
-  background-color: $iris-dark;
-  border-color: $iris-dark;
-
-  &:hover {
-    background-color: $iris-light;
-    border-color: $iris-light;
-  }
-}
-
-.btn-secondary {
-  background-color: $orange-dark;
-  border-color: $orange-dark;
-
-  &:hover {
-    background-color: $orange-light;
-    border-color: $orange-light;
-  }
 }
 
 body {
@@ -61,9 +37,22 @@ body {
     margin: 0 1rem;
     list-style-type: none;
     margin: 0.5rem 0;
-    & a img {
+    a img {
       height: 100px;
       width: auto;
+    }
+  }
+}
+
+.footer {
+  background-color: $iris-dark;
+
+  p {
+    margin-top: 1rem; // add this because bootstrap has builtin margin bottom of 1 rem
+    color: whitesmoke;
+
+    a {
+      color: $orange-light;
     }
   }
 }
@@ -80,7 +69,7 @@ body {
   .buttonGroup {
     margin-top: 1rem;
 
-    & li a img {
+    li a img {
       height: 100px;
       width: auto;
     }
@@ -112,13 +101,14 @@ body {
   .mainTitle {
     h1 {
       font-size: 2rem;
+      text-shadow: 0px 5hgjpx $iris-dark;
     }
   }
 
   .buttonGroup {
     margin-top: 1.5rem;
 
-    & li a img {
+    li a img {
       height: 125px;
     }
   }

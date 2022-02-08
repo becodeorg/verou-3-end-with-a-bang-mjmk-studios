@@ -1,1 +1,39 @@
-@import url("../../css/style.css");
+@import "../../css/style";
+
+body {
+  max-height: 100vh;
+}
+
+.title {
+  padding-top: 3rem;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.description {
+  color: whitesmoke;
+
+  & li {
+    list-style-type: none;
+  }
+}
+
+.keyboardMap {
+  padding-top: 3rem;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
