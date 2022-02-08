@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,OAAO,CAAC,0BAAI",
+    "mappings": "AAAA,OAAO,CAAC,0BAAI;AAEZ,AAAA,YAAY,CAAC;EACX,UAAU,EAAE,IAAI;CAKjB;;AAND,AAGE,YAHU,CAGV,GAAG,CAAC;EACF,SAAS,EAAE,IAAI;CAChB",
     "sources": [
         "muhammet.scss"
     ],
