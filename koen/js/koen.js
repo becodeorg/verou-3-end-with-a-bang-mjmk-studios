@@ -34,7 +34,7 @@ const commandStart = (command) => {
         roomBox.insertBefore(roomDes, roomBox.firstChild);
         let thirdHint = document.createElement("div");
         thirdHint.className = "hint";
-        thirdHint.innerHTML = "Hint: Maybe you could <span style='color: rgb(153, 153, 0);'>'examine'</span> <span style='color: red;'>Basile</span> or <span style='color: red;'>Bert</span>."
+        thirdHint.innerHTML = "Hint: Maybe you could <span style='color: rgb(153, 153, 0);'>'Examine'</span> <span style='color: red;'>Basile</span> or <span style='color: red;'>Bert</span>."
         roomBox.insertBefore(thirdHint, roomBox.firstChild);
         let directions = document.getElementById("directions");
         directions.innerHTML = "<span style='color: white;'>Possible directions are: </span><span style='color: rgb(153, 153, 0);'>" + rooms[0].directions + "</span>";
@@ -325,6 +325,48 @@ const commandStart = (command) => {
             roomBox.insertBefore(erwinBother, roomBox.firstChild);
         }
         // if Examine door
+        if (command == "Examine door") {
+            let roomBox = document.getElementById("roomBox");;
+            let dash = document.createElement("div");
+            dash.innerHTML = "-";
+            let doorDes = document.createElement("div");
+            doorDes.innerHTML = descriptions[0].objects.door.description;
+            roomBox.insertBefore(dash, roomBox.firstChild);
+            roomBox.insertBefore(doorDes, roomBox.firstChild);
+        }
+        // if Examine keypad
+        if (command == "Examine keypad") {
+            let roomBox = document.getElementById("roomBox");;
+            let dash = document.createElement("div");
+            dash.innerHTML = "-";
+            let keypadDes = document.createElement("div");
+            keypadDes.innerHTML = descriptions[0].objects.keypad.description;
+            roomBox.insertBefore(dash, roomBox.firstChild);
+            roomBox.insertBefore(keypadDes, roomBox.firstChild);
+            let hint = document.createElement("div");
+            hint.innerHTML = "<span style='color: green;'>Hint: To escape, you will have to 'Enter pin' followed by 4 digits. E.g. 'Enter pin 0000'</span>";
+            roomBox.insertBefore(hint, roomBox.firstChild);
+        }
+        // if Ask Erwin about pin code
+        if (command == "Ask Erwin about pin code") {
+            let roomBox = document.getElementById("roomBox");;
+            let dash = document.createElement("div");
+            dash.innerHTML = "-";
+            let askErwin = document.createElement("div");
+            askErwin.innerHTML = descriptions[0].creatures.Erwin.ask;
+            roomBox.insertBefore(dash, roomBox.firstChild);
+            roomBox.insertBefore(askErwin, roomBox.firstChild);
+        }
+        // if Enter pin 0000
+        if (command == "Enter pin 0000") {
+            let roomBox = document.getElementById("roomBox");;
+            let dash = document.createElement("div");
+            dash.innerHTML = "-";
+            let wrongPin = document.createElement("div");
+            wrongPin.innerHTML = "Computer says NO. Nice try, smart ass."
+            roomBox.insertBefore(dash, roomBox.firstChild);
+            roomBox.insertBefore(wrongPin, roomBox.firstChild);
+        }
     }
 }
 // submit button event listener
