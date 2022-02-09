@@ -7,7 +7,7 @@ export const rooms = [
     },
     {
         "room": "back of the classroom",
-        "description": "This part of the classroom is filled with standard <span style='color: red;'>tables</span> and chairs. There is really nothing special about them, just really avarage <span style='color: red;'>tables</span> and chairs. No need to <span style='color: rgb(153, 153, 0);'>examine</span> anything here. Especially not the <span style='color: red;'>tables</span>. West of you are floor to ceiling windows with a seven story drop behind it. East is a doorway leading to the elevators.",
+        "description": "This part of the classroom is filled with standard <span style='color: red;'>tables</span> and chairs. There is really nothing special about them, just really avarage <span style='color: red;'>tables</span> and chairs. No need to <span style='color: rgb(153, 153, 0);'>Examine</span> anything here. Especially not the <span style='color: red;'>tables</span>. West of you are floor to ceiling windows with a seven story drop behind it. East is a doorway leading to the elevators.",
         "directions": ["north", "east", "west"],
         "creatures": [],
     },
