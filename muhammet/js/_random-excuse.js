@@ -21,7 +21,6 @@ const fetchExcuse = () => {
     .then((data) => {
       setCategoryAsTitle(data[0].category);
       setJoke(data[0].excuse);
-      console.log(data[0].excuse);
     });
 };
 
