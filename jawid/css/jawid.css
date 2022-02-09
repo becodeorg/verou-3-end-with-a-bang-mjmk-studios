@@ -114,6 +114,9 @@ header #home i:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -320,6 +323,10 @@ i.fa-step-backward {
           animation-delay: 0s;
 }
 
+#wave {
+  margin-bottom: 20px;
+}
+
 footer {
   left: 0;
   bottom: 0;
@@ -363,6 +370,13 @@ footer .contactInfo .contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10px;
 }
 
 footer .contactInfo .contact img {
