@@ -18,7 +18,7 @@ const commandStart = (command) => {
         let roomBox = document.getElementById("roomBox");
         let actionBox = document.getElementById("actionBox");
         let dashDash = document.createElement("p");
-        dashDash.innerText = "----------------------------------------------------------";
+        dashDash.innerText = "-";
         roomBox.insertBefore(dashDash, roomBox.firstChild);
         let firstHint = document.createElement("div");
         firstHint.className = "hint";
@@ -47,7 +47,7 @@ const commandStart = (command) => {
         let roomBox = document.getElementById("roomBox");
         let actionBox = document.getElementById("actionBox");
         let dashDash = document.createElement("p");
-        dashDash.innerText = "----------------------------------------------------------";
+        dashDash.innerText = "-";
         roomBox.insertBefore(dashDash, roomBox.firstChild);
         let firstHint = document.createElement("div");
         firstHint.className = "hint";
@@ -230,6 +230,101 @@ const commandStart = (command) => {
             roomBox.insertBefore(dash, roomBox.firstChild);
             roomBox.insertBefore(itDes, roomBox.firstChild);
         }
+        // if norh
+        if (command == "north") {
+            whatRoom = rooms[0].room;
+            let roomBox = document.getElementById("roomBox");
+            let actionBox = document.getElementById("actionBox");
+            let dashDash = document.createElement("p");
+            dashDash.innerText = "-";
+            roomBox.insertBefore(dashDash, roomBox.firstChild);
+            let roomDes = document.createElement("div");
+            roomDes.innerHTML = rooms[0].description;
+            roomDes.style.color = "white";
+            roomBox.insertBefore(roomDes, roomBox.firstChild);
+            let directions = document.getElementById("directions");
+            directions.innerHTML = "<span style='color: white;'>Possible directions are: </span><span style='color: rgb(153, 153, 0);'>" + rooms[0].directions + "</span>";
+            let creatures = document.getElementById("creatures");
+            creatures.innerHTML = "<span style='color: white;'>Creatures: </span><span style='color: purple;'>" + rooms[0].creatures + "</span>";
+            return whatRoom;
+        }
+        // if east
+        if (command == "east") {
+            whatRoom = rooms[2].room;
+            let roomBox = document.getElementById("roomBox");
+            let actionBox = document.getElementById("actionBox");
+            let dashDash = document.createElement("p");
+            dashDash.innerText = "-";
+            roomBox.insertBefore(dashDash, roomBox.firstChild);
+            let roomDes = document.createElement("div");
+            roomDes.innerHTML = rooms[2].description;
+            roomBox.insertBefore(roomDes, roomBox.firstChild);
+            let directions = document.getElementById("directions");
+            directions.innerHTML = "<span style='color: white;'>Possible directions are: </span><span style='color: rgb(153, 153, 0);'>" + rooms[2].directions + "</span>";
+            let creatures = document.getElementById("creatures");
+            creatures.innerHTML = "<span style='color: white;'>Creatures: </span><span style='color: purple;'>" + rooms[2].creatures + "</span>";
+            return whatRoom;
+        }
+    }
+    if (whatRoom == rooms[2].room) {
+        let roomBox = document.getElementById("roomBox");;
+        let dash = document.createElement("div");
+        dash.innerHTML = "-";
+        let roomDes = document.createElement("div");
+        roomDes.innerHTML = rooms[2].description;
+        roomBox.insertBefore(dash, roomBox.firstChild);
+        roomBox.insertBefore(roomDes, roomBox.firstChild);
+        let directions = document.getElementById("directions");
+        directions.innerHTML = "<span style='color: white;'>Possible directions are: </span><span style='color: rgb(153, 153, 0);'>" + rooms[2].directions + "</span>";
+        let creatures = document.getElementById("creatures");
+        creatures.innerHTML = "<span style='color: white;'>Creatures: </span><span style='color: purple;'>" + rooms[2].creatures + "</span>";
+        // if Look
+        if (command == "Look") {
+            let roomBox = document.getElementById("roomBox");;
+            let dash = document.createElement("div");
+            dash.innerHTML = "-";
+            let roomDes = document.createElement("div");
+            roomDes.innerHTML = rooms[2].description;
+            roomBox.insertBefore(dash, roomBox.firstChild);
+            roomBox.insertBefore(roomDes, roomBox.firstChild);
+        }
+        // if west
+        if (command == "west") {
+            whatRoom = rooms[1].room;
+            let roomBox = document.getElementById("roomBox");;
+            let dash = document.createElement("div");
+            dash.innerHTML = "-";
+            let roomDes = document.createElement("div");
+            roomDes.innerHTML = rooms[1].description;
+            roomBox.insertBefore(dash, roomBox.firstChild);
+            roomBox.insertBefore(roomDes, roomBox.firstChild);
+            let directions = document.getElementById("directions");
+            directions.innerHTML = "<span style='color: white;'>Possible directions are: </span><span style='color: rgb(153, 153, 0);'>" + rooms[1].directions + "</span>";
+            let creatures = document.getElementById("creatures");
+            creatures.innerHTML = "<span style='color: white;'>Creatures: </span><span style='color: purple;'> none </span>";
+            return whatRoom;
+        }
+        //if Examine Erwin
+        if (command == "Examine Erwin") {
+            let roomBox = document.getElementById("roomBox");;
+            let dash = document.createElement("div");
+            dash.innerHTML = "-";
+            let erwinDes = document.createElement("div");
+            erwinDes.innerHTML = descriptions[0].creatures.Erwin.description;
+            roomBox.insertBefore(dash, roomBox.firstChild);
+            roomBox.insertBefore(erwinDes, roomBox.firstChild);
+        }
+        //if Bother Erwin
+        if (command == "Bother Erwin") {
+            let roomBox = document.getElementById("roomBox");;
+            let dash = document.createElement("div");
+            dash.innerHTML = "-";
+            let erwinBother = document.createElement("div");
+            erwinBother.innerHTML = descriptions[0].creatures.Erwin.bothered;
+            roomBox.insertBefore(dash, roomBox.firstChild);
+            roomBox.insertBefore(erwinBother, roomBox.firstChild);
+        }
+        // if Examine door
     }
 }
 // submit button event listener

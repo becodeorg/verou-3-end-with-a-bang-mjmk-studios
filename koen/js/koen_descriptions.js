@@ -9,6 +9,10 @@ export const descriptions = [
             "Bert": {
                 "description": "<span style='color: red';>Bert</span> looks at you bleary eyed. He is mumbling something about 'Nora' and 'getting no sleep'."
             },
+            "Erwin": {
+                "description": "<span style='color: red';>Erwin</span> is standing here. He looks like he just walked a 1000 miles. He's on the phone.",
+                "bothered": "<span style='color: red';>Erwin</span> looks at you distracted. <span style='color: purple';>I'm on the phone right now, yeah. I'll be with you in a minute ok? yeah?...yeah, ok.</span> You bothered <span style='color: red';>Erwin</span>. Way to go, people-botherer."
+            }
         },
         "directions":
         {
