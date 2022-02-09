@@ -1,7 +1,7 @@
 const songList = [
   {
     img: "/jawid/images/dua-lipa.jpg",
-    name: "Dua lipa ft Angele",
+    name: "Dua lipa ft Angèle",
     artist: "Fever...",
     music:
       "/jawid/music/Dua_Lipa,_Angèle_-_Fever_(Official_Music_Video)(128k).mp3",
@@ -9,7 +9,7 @@ const songList = [
   {
     img: "/jawid/images/aytac-togan.jpg",
     name: "Turkish kanon",
-    artist: "Aytac-togan",
+    artist: "Aytac-dogan",
     music:
       "/jawid/music/aytac_dogan_kanun_resitali_1_full_album_video(128k).mp3",
   },
@@ -49,7 +49,7 @@ const songList = [
     music: "/jawid/music/Alan_Walker_&_Ava_Max_-_Alone,_Pt._II(128k).mp3",
   },
   {
-    img: "/jawid/images/shakira - Copy - Copy.jpg",
+    img: "/jawid/images/shakira.jpg",
     name: "Clandestino",
     artist: "Shakira",
     music:
@@ -67,6 +67,13 @@ const songList = [
     artist: "Alan walker",
     music:
       "/jawid/music/One_Touch_&_I_Ignite__K-391_&_Alan_Walker_Live_Performance_at_VG-Lista_2018(128k).mp3",
+  },
+  {
+    img: "/jawid/images/Selena-Gomez.jpg",
+    name: "The heart wants...",
+    artist: "Selena Gomez",
+    music:
+      "/jawid/music/Selena_Gomez_-_The_Heart_Wants_What_It_Wants_(Official_Video)(128k).mp3",
   },
 ];
 
@@ -120,20 +127,20 @@ function reset() {
   total_duration.textContent = "00:00";
   seek_slider.value = 0;
 }
-// const playRandom = () => {
-//   isRandom = true;
-//   randomIcon.classList.add("randomActive");
-// };
-// const pauseRandom = () => {
-//   isRandom = false;
-//   randomIcon.classList.remove("randomActive");
-// };
+const playRandom = () => {
+  isRandom = true;
+  randomIcon.classList.add("randomActive");
+};
+const pauseRandom = () => {
+  isRandom = false;
+  randomIcon.classList.remove("randomActive");
+};
 
-// const randomTrack = () => {
-//   isRandom ? pauseRandom() : playRandom();
-// };
-// const randomSong = document.querySelector(".random-track");
-// randomSong.addEventListener("click", randomTrack);
+const randomTrack = () => {
+  isRandom ? pauseRandom() : playRandom();
+};
+const randomSong = document.querySelector(".random-track");
+randomSong.addEventListener("click", randomTrack);
 
 const repeatTrack = () => {
   let current_index = track_index;

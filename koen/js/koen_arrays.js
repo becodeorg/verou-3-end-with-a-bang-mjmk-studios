@@ -7,13 +7,13 @@ export const rooms = [
     },
     {
         "room": "back of the classroom",
-        "description": "This part of the classroom is filled with standard <span style='color: red;'>tables</span> and chairs. There is really nothing special about them, just really avarage <span style='color: red;'>tables</span> and chairs. No need to <span style='color: rgb(153, 153, 0);'>Examine</span> anything here. Especially not the <span style='color: red;'>tables</span>. West of you are floor to ceiling windows with a seven story drop behind it. East is a doorway leading to the elevators.",
+        "description": "This part of the classroom is filled with standard <span style='color: red;'>tables</span> and chairs. There is really nothing special about them, just really avarage <span style='color: red;'>tables</span> and chairs. No need to <span style='color: rgb(153, 153, 0);'>E  xamine</span> anything here. Especially not the <span style='color: red;'>tables</span>. West of you are floor to ceiling windows with a seven story drop behind it. East is a doorway leading to the elevators.",
         "directions": ["north", "east", "west"],
         "creatures": [],
     },
     {
         "room": "elevator room",
-        "description": "This is a fairly empty room. To the south is the elevator <span style='color: red;'>door</span>. To the east through a doorway you can see <span style='color: red;'>Erwin</span>. He is on the phone with someone, yeah, so you probably shouldn't <span style='color: rgb(153, 153, 0);'>bother</span> him, ok, yeah.",
+        "description": "This is a fairly empty room. To the south is the elevator <span style='color: red;'>door</span>. To the east through a doorway you can see <span style='color: red;'>Erwin</span>. He is on the phone with someone, yeah, so you probably shouldn't <span style='color: rgb(153, 153, 0);'>Bother</span> him, ok, yeah.",
         "directions": ["west"],
         "creatures": ["Erwin is standing here."],
     },
