@@ -73,6 +73,7 @@ body main #boxBox #contentBox #roomBox {
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
+  color: white;
 }
 
 body main #boxBox #contentBox #actionBox {
