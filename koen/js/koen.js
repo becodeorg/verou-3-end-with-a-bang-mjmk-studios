@@ -1,5 +1,6 @@
 // import necessary js files
 import { rooms } from "./koen_arrays.js";
+import { descriptions } from "./koen_descriptions.js"
 // globals
 let whatRoom;
 
@@ -69,7 +70,8 @@ const commandStart = (command) => {
         let creatures = document.getElementById("creatures");
         creatures.innerHTML = "<span style='color: white;'>Creatures: </span><span style='color: purple;'>" + rooms[0].creatures + "</span>";
         if (command == "Examine Basile") {
-            console.log("coucou");
+            console.log(descriptions[0].creatures.Basile.description);
+            let basileDes = document.createElement("div");
         }
     }
 }
