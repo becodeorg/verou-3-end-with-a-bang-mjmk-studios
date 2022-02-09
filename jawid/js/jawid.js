@@ -1,27 +1,72 @@
 const songList = [
   {
-    img: "images/vidar-nordli-mathisen-CTlRgg7Gfmw-unsplash.jpg",
-    name: "Stay",
-    artist: "The Kid LAROI, Justin Bieber",
-    music: "music/happy-song-907.mp3",
+    img: "/jawid/images/dua-lipa.jpg",
+    name: "Dua lipa ft Angele",
+    artist: "Fever...",
+    music:
+      "/jawid/music/Dua_Lipa,_Angèle_-_Fever_(Official_Music_Video)(128k).mp3",
   },
   {
-    img: "images/alexander-popov-hTv8aaPziOQ-unsplash.jpg",
-    name: "Falling Down",
-    artist: "Wid Cards",
-    music: "music/happy-song-907.mp3",
+    img: "/jawid/images/aytac-togan.jpg",
+    name: "Turkish kanon",
+    artist: "Aytac-togan",
+    music:
+      "/jawid/music/aytac_dogan_kanun_resitali_1_full_album_video(128k).mp3",
+  },
+
+  {
+    img: "/jawid/images/Adele.jpg",
+    name: "Someone like you",
+    artist: "Adele",
+    music:
+      "/jawid/music/Adele_-_Someone_Like_You_(Official_Music_Video)(128k).mp3",
+  },
+
+  {
+    img: "/jawid/images/ariane-grande.jpg",
+    name: "Ariana Grande",
+    artist: "Side to side",
+    music:
+      "/jawid/music/Ariana_Grande_ft._Nicki_Minaj_-_Side_To_Side_(Official_Video)_ft._Nicki_Minaj(128k).mp3",
   },
   {
-    img: "images/ana-grave-gHcWaeldgtQ-unsplash.jpg",
-    name: "Faded",
-    artist: "Alan Walker",
-    music: "music/watr-fluid-10149.mp3",
+    img: "/jawid/images/daddy-yankee.jpg",
+    name: "Con calma",
+    artist: "Daddy yankee",
+    music:
+      "/jawid/music/Daddy_Yankee_&_Snow_-_Con_Calma_(Video_Oficial)(128k).mp3",
   },
   {
-    img: "images/te-nguyen-Wt7XT1R6sjU-unsplash.jpg",
-    name: "Rather Be",
-    artist: "Clean Bandit",
-    music: "music/the-introvert-michael-kobrin-10959.mp3",
+    img: "/jawid/images/daiele-vitale.jpg",
+    name: "Daniel vitale",
+    artist: "Dance monkey sax",
+    music: "/jawid/music/DANCE_MONKEY_-_STREET_SAX_PERFORMANCE(128k).mp3",
+  },
+  {
+    img: "/jawid/images/alone-walker.jpg",
+    name: "Alan walker",
+    artist: "Ava max",
+    music: "/jawid/music/Alan_Walker_&_Ava_Max_-_Alone,_Pt._II(128k).mp3",
+  },
+  {
+    img: "/jawid/images/shakira - Copy - Copy.jpg",
+    name: "Clandestino",
+    artist: "Shakira",
+    music:
+      "/jawid/music/Shakira,_Maluma_-_Clandestino_(Official_Video)(128k).mp3",
+  },
+  {
+    img: "/jawid/images/stromae.jpg",
+    name: "Santé",
+    artist: "Stromae",
+    music: "/jawid/music/Stromae_-_Santé_(Official_Music_Video)(128k).mp3",
+  },
+  {
+    img: "/jawid/images/alone-walker-ignite.jpg",
+    name: "One touch & I ignite",
+    artist: "Alan walker",
+    music:
+      "/jawid/music/One_Touch_&_I_Ignite__K-391_&_Alan_Walker_Live_Performance_at_VG-Lista_2018(128k).mp3",
   },
 ];
 
@@ -75,21 +120,21 @@ function reset() {
   total_duration.textContent = "00:00";
   seek_slider.value = 0;
 }
+// const playRandom = () => {
+//   isRandom = true;
+//   randomIcon.classList.add("randomActive");
+// };
+// const pauseRandom = () => {
+//   isRandom = false;
+//   randomIcon.classList.remove("randomActive");
+// };
 
-const randomTrack = () => {
-  isRandom ? pauseRandom() : playRandom();
-};
-const randomSong = document.querySelector(".random-track");
-randomSong.addEventListener("click", randomTrack);
+// const randomTrack = () => {
+//   isRandom ? pauseRandom() : playRandom();
+// };
+// const randomSong = document.querySelector(".random-track");
+// randomSong.addEventListener("click", randomTrack);
 
-const playRandom = () => {
-  isRandom = true;
-  randomIcon.classList.add("randomActive");
-};
-const pauseRandom = () => {
-  isRandom = false;
-  randomIcon.classList.remove("randomActive");
-};
 const repeatTrack = () => {
   let current_index = track_index;
   loadTrack(current_index);
