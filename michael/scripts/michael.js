@@ -31,20 +31,16 @@ const getAnimeWallpaper = (event) => {
 
 // getAnime is private to the event; need to return getAnime
 
- concatenateString = () => {
- if (getAnime === "assassination classroom") {
-  let getAnime = "assassination-classroom-wallpapers"}
-  console.log (getAnime);
- }
+ 
 
 
+const firstApiCall = async() => {
 
-
-fetch("https://yume-anime-wallpapers.p.rapidapi.com/manga_anime", {
+await fetch("https://yume-anime-wallpapers.p.rapidapi.com/manga_anime", {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-host": "yume-anime-wallpapers.p.rapidapi.com",
-		"x-rapidapi-key": "04501cdf0fmshdf715127297ee93p15b933jsnf2181477577f"
+		"x-rapidapi-key": "e1fc11060emsh56e7368925313f9p1174d1jsn3e6d83911114"
 	}
 })
 .then((response) => response.json())
@@ -60,12 +56,28 @@ fetch("https://yume-anime-wallpapers.p.rapidapi.com/manga_anime", {
   let slugArray = data;
   for (let i = 0; i < slugArray.length; i++) {
     console.log(slugArray[i].slug)};
-    
+
+
+fetch("https://yume-anime-wallpapers.p.rapidapi.com/manga_anime?slug=" + getAnime, {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "yume-anime-wallpapers.p.rapidapi.com",
+		"x-rapidapi-key": "e1fc11060emsh56e7368925313f9p1174d1jsn3e6d83911114"
+	}
+})
+.then((response) => response.json())
+.then ((data) => {
+console.log(data);
+}
+)
+.catch(err => {
+	console.error(err);
+});
 })
 .catch(err => {
 	console.error(err);
 });
-
+}
 //TODO: add the additional values to the searched string
 
 

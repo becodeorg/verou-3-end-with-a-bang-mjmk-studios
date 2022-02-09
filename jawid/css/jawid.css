@@ -18,17 +18,15 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 60px;
+  padding: 10px;
+  height: 70px;
   background-color: #222;
 }
 
-header a i {
+header #home i {
   color: #f56e00;
   width: 50px;
 }
@@ -53,6 +51,7 @@ header a i {
 .wrapper {
   border: 1px solid transparent;
   padding: 20px;
+  margin-bottom: 30px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(red), color-stop(yellow), to(green));
   background-image: linear-gradient(red, yellow, green);
   opacity: 0.9;
@@ -95,12 +94,12 @@ header a i {
 }
 
 .track-name {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 .track-artist {
   margin-top: 5px;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .buttons {
@@ -114,7 +113,7 @@ header a i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .active {
@@ -126,7 +125,7 @@ header a i {
 .playPause-track,
 .prev-track,
 .next-track {
-  padding: 25px;
+  padding: 15px;
   opacity: 0.8;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
@@ -322,7 +321,7 @@ footer {
   bottom: 0;
   max-width: 100%;
   padding: 10px;
-  background-color: #111111;
+  background-color: #222;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -338,18 +337,18 @@ footer {
           justify-content: center;
 }
 
-.contactInfo {
+footer .contactInfo {
   text-align: center;
-  color: orange;
+  color: #f56e00;
 }
 
-.contact {
+footer .contactInfo .contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.contact img {
+footer .contactInfo .contact img {
   width: 30px;
   margin: 10px 5px;
 }
