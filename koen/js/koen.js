@@ -69,9 +69,166 @@ const commandStart = (command) => {
         directions.innerHTML = "<span style='color: white;'>Possible directions are: </span><span style='color: rgb(153, 153, 0);'>" + rooms[0].directions + "</span>";
         let creatures = document.getElementById("creatures");
         creatures.innerHTML = "<span style='color: white;'>Creatures: </span><span style='color: purple;'>" + rooms[0].creatures + "</span>";
+        // if Examine Basile
         if (command == "Examine Basile") {
+            let roomBox = document.getElementById("roomBox");
             console.log(descriptions[0].creatures.Basile.description);
+            let dash = document.createElement("div");
+            dash.innerHTML = "-";
             let basileDes = document.createElement("div");
+            basileDes.innerHTML = descriptions[0].creatures.Basile.description;
+            roomBox.insertBefore(dash, roomBox.firstChild);
+            roomBox.insertBefore(basileDes, roomBox.firstChild);
+        }
+        //if Examine Bert
+        if (command == "Examine Bert") {
+            let roomBox = document.getElementById("roomBox");
+            console.log(descriptions[0].creatures.Bert.description);
+            let dash = document.createElement("div");
+            dash.innerHTML = "-";
+            let bertDes = document.createElement("div");
+            bertDes.innerHTML = descriptions[0].creatures.Bert.description;
+            roomBox.insertBefore(dash, roomBox.firstChild);
+            roomBox.insertBefore(bertDes, roomBox.firstChild);
+        }
+        // if west
+        if (command == "west") {
+            let roomBox = document.getElementById("roomBox");;
+            let dash = document.createElement("div");
+            dash.innerHTML = "-";
+            let westDes = document.createElement("div");
+            westDes.innerHTML = descriptions[0].directions.west.description;
+            roomBox.insertBefore(dash, roomBox.firstChild);
+            roomBox.insertBefore(westDes, roomBox.firstChild);
+        }
+        // if Examine whiteboard
+        if (command == "Examine whiteboard") {
+            let roomBox = document.getElementById("roomBox");;
+            let dash = document.createElement("div");
+            dash.innerHTML = "-";
+            let whiteboardDes = document.createElement("div");
+            whiteboardDes.innerHTML = descriptions[0].objects.whiteboard.description;
+            roomBox.insertBefore(dash, roomBox.firstChild);
+            roomBox.insertBefore(whiteboardDes, roomBox.firstChild);
+        }
+        // if Read whiteboard
+        if (command == "Read whiteboard") {
+            let roomBox = document.getElementById("roomBox");;
+            let dash = document.createElement("div");
+            dash.innerHTML = "-";
+            let whiteboardText = document.createElement("div");
+            whiteboardText.innerHTML = descriptions[0].objects.whiteboard.text;
+            roomBox.insertBefore(dash, roomBox.firstChild);
+            roomBox.insertBefore(whiteboardText, roomBox.firstChild);
+        }
+        // if Look
+        if (command == "Look") {
+            let roomBox = document.getElementById("roomBox");;
+            let dash = document.createElement("div");
+            dash.innerHTML = "-";
+            let roomDes = document.createElement("div");
+            roomDes.innerHTML = rooms[0].description;
+            roomBox.insertBefore(dash, roomBox.firstChild);
+            roomBox.insertBefore(roomDes, roomBox.firstChild);
+        }
+        // if south
+        if (command == "south") {
+            whatRoom = rooms[1].room;
+            let roomBox = document.getElementById("roomBox");;
+            let dash = document.createElement("div");
+            dash.innerHTML = "-";
+            let roomDes = document.createElement("div");
+            roomDes.innerHTML = rooms[1].description;
+            roomBox.insertBefore(dash, roomBox.firstChild);
+            roomBox.insertBefore(roomDes, roomBox.firstChild);
+            let directions = document.getElementById("directions");
+            directions.innerHTML = "<span style='color: white;'>Possible directions are: </span><span style='color: rgb(153, 153, 0);'>" + rooms[1].directions + "</span>";
+            let creatures = document.getElementById("creatures");
+            creatures.innerHTML = "<span style='color: white;'>Creatures: </span><span style='color: purple;'> none </span>";
+            return whatRoom;
+        }
+    }
+    if (whatRoom == rooms[1].room || command == "room2") {
+        let roomBox = document.getElementById("roomBox");;
+        let dash = document.createElement("div");
+        dash.innerHTML = "-";
+        let roomDes = document.createElement("div");
+        roomDes.innerHTML = rooms[1].description;
+        roomBox.insertBefore(dash, roomBox.firstChild);
+        roomBox.insertBefore(roomDes, roomBox.firstChild);
+        let directions = document.getElementById("directions");
+        directions.innerHTML = "<span style='color: white;'>Possible directions are: </span><span style='color: rgb(153, 153, 0);'>" + rooms[1].directions + "</span>";
+        let creatures = document.getElementById("creatures");
+        creatures.innerHTML = "<span style='color: white;'>Creatures: </span><span style='color: purple;'> none </span>";
+        // if Look
+        if (command == "Look") {
+            let roomBox = document.getElementById("roomBox");;
+            let dash = document.createElement("div");
+            dash.innerHTML = "-";
+            let roomDes = document.createElement("div");
+            roomDes.innerHTML = rooms[1].description;
+            roomBox.insertBefore(dash, roomBox.firstChild);
+            roomBox.insertBefore(roomDes, roomBox.firstChild);
+        }
+        // if west
+        if (command == "west") {
+            let roomBox = document.getElementById("roomBox");;
+            let dash = document.createElement("div");
+            dash.innerHTML = "-";
+            let westDes = document.createElement("div");
+            westDes.innerHTML = descriptions[0].directions.west.description;
+            roomBox.insertBefore(dash, roomBox.firstChild);
+            roomBox.insertBefore(westDes, roomBox.firstChild);
+        }
+        // if Examine tables
+        if (command == "Examine tables") {
+            let roomBox = document.getElementById("roomBox");;
+            let dash = document.createElement("div");
+            dash.innerHTML = "-";
+            let tablesDes = document.createElement("div");
+            tablesDes.innerHTML = descriptions[0].objects.tables.description;
+            roomBox.insertBefore(dash, roomBox.firstChild);
+            roomBox.insertBefore(tablesDes, roomBox.firstChild);
+        }
+        // if Examine table1
+        if (command == "Examine table1") {
+            let roomBox = document.getElementById("roomBox");;
+            let dash = document.createElement("div");
+            dash.innerHTML = "-";
+            let table1Des = document.createElement("div");
+            table1Des.innerHTML = descriptions[0].objects.table1.description,
+                roomBox.insertBefore(dash, roomBox.firstChild);
+            roomBox.insertBefore(table1Des, roomBox.firstChild);
+        }
+        // if Examine table2
+        if (command == "Examine table2") {
+            let roomBox = document.getElementById("roomBox");;
+            let dash = document.createElement("div");
+            dash.innerHTML = "-";
+            let table2Des = document.createElement("div");
+            table2Des.innerHTML = descriptions[0].objects.table2.description,
+                roomBox.insertBefore(dash, roomBox.firstChild);
+            roomBox.insertBefore(table2Des, roomBox.firstChild);
+        }
+        // if Examine table3
+        if (command == "Examine table3") {
+            let roomBox = document.getElementById("roomBox");;
+            let dash = document.createElement("div");
+            dash.innerHTML = "-";
+            let table3Des = document.createElement("div");
+            table3Des.innerHTML = descriptions[0].objects.table3.description;
+            roomBox.insertBefore(dash, roomBox.firstChild);
+            roomBox.insertBefore(table3Des, roomBox.firstChild);
+        }
+        // if Grab it
+        if (command == "Grab it") {
+            let roomBox = document.getElementById("roomBox");;
+            let dash = document.createElement("div");
+            dash.innerHTML = "-";
+            let itDes = document.createElement("div");
+            itDes.innerHTML = descriptions[0].objects.it.description;
+            roomBox.insertBefore(dash, roomBox.firstChild);
+            roomBox.insertBefore(itDes, roomBox.firstChild);
         }
     }
 }
