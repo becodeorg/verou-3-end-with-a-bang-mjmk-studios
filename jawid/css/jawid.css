@@ -161,7 +161,7 @@ header #home i:hover {
   -moz-appearance: none;
   appearance: none;
   height: 5px;
-  background: #83a9ff;
+  background: #5d5fef;
   -webkit-transition: 0.2s;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
@@ -175,7 +175,7 @@ header #home i:hover {
   width: 15px;
   height: 15px;
   background: white;
-  border: 3px solid #3774ff;
+  border: 3px solid #a5a6f6;
   cursor: pointer;
   border-radius: 100%;
 }
@@ -343,7 +343,20 @@ footer {
 
 footer .contactInfo {
   text-align: center;
+}
+
+footer .contactInfo p {
+  color: white;
+}
+
+footer .contactInfo p span {
   color: #f56e00;
+  font-size: 1.2rem;
+}
+
+footer .contactInfo p span:hover {
+  color: #ffc107;
+  cursor: pointer;
 }
 
 footer .contactInfo .contact {
