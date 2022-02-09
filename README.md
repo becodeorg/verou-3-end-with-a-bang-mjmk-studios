@@ -23,5 +23,5 @@ A place where you relax, chill and procrastinate. Play games, listen to music, r
 
 - [x] Muhammet <https://github.com/Muhammetacin>
 - [x] Koen <https://github.com/KoenH81>
-- [ ] Michael <>
+- [x] Michael <https://github.com/Ranzop>
 - [ ] Jawid <>
