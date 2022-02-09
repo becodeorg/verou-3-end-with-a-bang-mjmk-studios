@@ -21,13 +21,24 @@ const submitButton = document.getElementById("search-button");
 console.log (submitButton);
 
 
-
+let getAnime;
 const getAnimeWallpaper = (event) => {
     event.preventDefault();
-    const getAnime = getSearch.value;
+    const getAnime = getSearch.value.toLowerCase();
     console.log (getAnime);
     return getAnime;
 }
+
+// getAnime is private to the event; need to return getAnime
+
+ concatenateString = () => {
+ if (getAnime === "assassination classroom") {
+  let getAnime = "assassination-classroom-wallpapers"}
+  console.log (getAnime);
+ }
+
+
+
 
 fetch("https://yume-anime-wallpapers.p.rapidapi.com/manga_anime", {
 	"method": "GET",
@@ -46,10 +57,17 @@ fetch("https://yume-anime-wallpapers.p.rapidapi.com/manga_anime", {
     aa, bb, cc, dd, ee, ff, gg, hh, ii, jj, kk, ll, mm, nn, oo, pp, qq, rr, ss, tt, uu, vv, ww, qqq, yy, zz] = data;
   console.log(a);
   console.log(b.slug);
+  let slugArray = data;
+  for (let i = 0; i < slugArray.length; i++) {
+    console.log(slugArray[i].slug)};
+    
 })
 .catch(err => {
 	console.error(err);
 });
+
+//TODO: add the additional values to the searched string
+
 
 
 /* function wallpaperChanger(data, getAnime) {
