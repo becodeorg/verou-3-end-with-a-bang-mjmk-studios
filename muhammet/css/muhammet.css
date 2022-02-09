@@ -161,6 +161,11 @@ body {
   max-height: 100vh;
 }
 
+p {
+  color: whitesmoke;
+  font-size: 1.5rem;
+}
+
 .title {
   padding-top: 3rem;
   color: whitesmoke;
