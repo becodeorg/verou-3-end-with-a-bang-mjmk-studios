@@ -4,23 +4,25 @@ body {
   max-height: 100vh;
 }
 
-p {
+.sectionDescr {
+  margin: 1rem 0;
   color: whitesmoke;
   font-size: 1.5rem;
+  list-style-type: none;
+
+  ul {
+    background-color: whitesmoke;
+    color: #222;
+    border-radius: 5px;
+    padding-left: 5px;
+    width: 35%;
+  }
 }
 
 .title {
   padding-top: 3rem;
   color: whitesmoke;
   text-align: center;
-}
-
-.description {
-  color: whitesmoke;
-
-  & li {
-    list-style-type: none;
-  }
 }
 
 .keyboardMap {
