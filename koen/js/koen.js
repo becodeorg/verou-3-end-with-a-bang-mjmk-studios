@@ -14,7 +14,7 @@ const readInput = (event) => {
 }
 // if command is 'start'
 const commandStart = (command) => {
-    if (command == "start") {
+    if (command == "Start") {
         whatRoom = rooms[0].room;
         console.log(whatRoom);
         let roomBox = document.getElementById("roomBox");
@@ -94,7 +94,7 @@ const commandStart = (command) => {
             roomBox.insertBefore(bertDes, roomBox.firstChild);
         }
         // if west
-        if (command == "west") {
+        if (command == "West") {
             let roomBox = document.getElementById("roomBox");;
             let dash = document.createElement("div");
             dash.innerHTML = "-";
@@ -133,8 +133,9 @@ const commandStart = (command) => {
             roomBox.insertBefore(dash, roomBox.firstChild);
             roomBox.insertBefore(roomDes, roomBox.firstChild);
         }
-        // if south
-        if (command == "south") {
+        // if South
+        if (command == "South") {
+            console.log('ok');
             whatRoom = rooms[1].room;
             let roomBox = document.getElementById("roomBox");;
             let dash = document.createElement("div");
@@ -148,6 +149,26 @@ const commandStart = (command) => {
             let creatures = document.getElementById("creatures");
             creatures.innerHTML = "<span style='color: white;'>Creatures: </span><span style='color: purple;'> none </span>";
             return whatRoom;
+        }
+        // if Ask Basile about pin code
+        if (command == "Ask Basile about pin code") {
+            let roomBox = document.getElementById("roomBox");;
+            let dash = document.createElement("div");
+            dash.innerHTML = "-";
+            let basileAsk = document.createElement("div");
+            basileAsk.innerHTML = descriptions[0].creatures.Basile.ask;
+            roomBox.insertBefore(dash, roomBox.firstChild);
+            roomBox.insertBefore(basileAsk, roomBox.firstChild);
+        }
+        // if Ask Bert about pin code
+        if (command == "Ask Bert about pin code") {
+            let roomBox = document.getElementById("roomBox");;
+            let dash = document.createElement("div");
+            dash.innerHTML = "-";
+            let bertAsk = document.createElement("div");
+            bertAsk.innerHTML = descriptions[0].creatures.Bert.ask;
+            roomBox.insertBefore(dash, roomBox.firstChild);
+            roomBox.insertBefore(bertAsk, roomBox.firstChild);
         }
     }
     if (whatRoom == rooms[1].room || command == "room2") {
@@ -172,8 +193,8 @@ const commandStart = (command) => {
             roomBox.insertBefore(dash, roomBox.firstChild);
             roomBox.insertBefore(roomDes, roomBox.firstChild);
         }
-        // if west
-        if (command == "west") {
+        // if West
+        if (command == "West") {
             let roomBox = document.getElementById("roomBox");;
             let dash = document.createElement("div");
             dash.innerHTML = "-";
@@ -233,7 +254,7 @@ const commandStart = (command) => {
             roomBox.insertBefore(itDes, roomBox.firstChild);
         }
         // if norh
-        if (command == "north") {
+        if (command == "North") {
             whatRoom = rooms[0].room;
             let roomBox = document.getElementById("roomBox");
             let actionBox = document.getElementById("actionBox");
@@ -250,8 +271,8 @@ const commandStart = (command) => {
             creatures.innerHTML = "<span style='color: white;'>Creatures: </span><span style='color: purple;'>" + rooms[0].creatures + "</span>";
             return whatRoom;
         }
-        // if east
-        if (command == "east") {
+        // if East
+        if (command == "East") {
             whatRoom = rooms[2].room;
             let roomBox = document.getElementById("roomBox");
             let actionBox = document.getElementById("actionBox");
@@ -291,7 +312,7 @@ const commandStart = (command) => {
             roomBox.insertBefore(roomDes, roomBox.firstChild);
         }
         // if west
-        if (command == "west") {
+        if (command == "West") {
             whatRoom = rooms[1].room;
             let roomBox = document.getElementById("roomBox");;
             let dash = document.createElement("div");
@@ -369,6 +390,26 @@ const commandStart = (command) => {
             roomBox.insertBefore(dash, roomBox.firstChild);
             roomBox.insertBefore(wrongPin, roomBox.firstChild);
         }
+        // if Enter pin 5746
+        if (command == "Enter pin 5746") {
+            let roomBox = document.getElementById("roomBox");;
+            let dash = document.createElement("div");
+            dash.innerHTML = "-";
+            let correctPin = document.createElement("div");
+            correctPin.className = "end";
+            correctPin.innerHTML = "PING! The elevator doors open. </br> Congratulations, you escaped. </br> Just remember that your time on earth is short and fleating. </br> Have a nice day. </br> <span style='color: yellow';>THE END</span>";
+            roomBox.insertBefore(dash, roomBox.firstChild);
+            roomBox.insertBefore(correctPin, roomBox.firstChild);
+        }
+    }
+    if (command == "?") {
+        let roomBox = document.getElementById("roomBox");;
+        let dash = document.createElement("div");
+        dash.innerHTML = "-";
+        let help = document.createElement("div");
+        help.innerHTML = "<span style='color: rgb(153, 153, 0);'>Examine</span> let's you get a better look at things. </br><span style='color: rgb(153, 153, 0);'>Look</span> let's you see the room description again.</br><span style='color: rgb(153, 153, 0);'>North, East, South, West</span> let you navigate to a different room.</br><span style='color: rgb(153, 153, 0);'>Start</span> to start or reset the game.</br> There are several commands hidden away in the game itself.";
+        roomBox.insertBefore(dash, roomBox.firstChild);
+        roomBox.insertBefore(help, roomBox.firstChild);
     }
 }
 // submit button event listener

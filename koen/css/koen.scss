@@ -76,8 +76,12 @@ body{
                         font-size: 13px;
                         font-weight: bold;
                         text-align: center;
-
+                        p{color: black;}
                     }
+                    #submit{
+                        cursor: pointer;
+                    }
+                    
                 }
             }
         }
