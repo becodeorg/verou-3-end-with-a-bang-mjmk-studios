@@ -158,7 +158,7 @@ body {
 }
 
 body {
-  max-height: 95vh;
+  height: 95vh !important;
 }
 
 .sectionDescr {
@@ -173,7 +173,6 @@ body {
   color: #222;
   border-radius: 5px;
   padding-left: 5px;
-  width: 35%;
 }
 
 .title {
@@ -187,10 +186,59 @@ body {
 }
 
 .keyboardMap img {
-  max-width: 100%;
+  max-width: 80%;
 }
 
 #uselessBtn {
   margin-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+  .keyboard {
+    margin-top: 1.5rem;
+    padding: 2rem 0;
+  }
+  .whiteKey {
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    text-align: center;
+    font-weight: 700;
+  }
+  .blackKey {
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+  }
+  .redKey {
+    height: 50px;
+    width: 50px;
+    background-color: crimson;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+  }
+  .keyPressed {
+    background-color: #96ec02;
+    color: #222;
+  }
+  .sectionDescr ul {
+    width: 75%;
+  }
+}
+
+@media (min-width: 992px) {
+  .sectionDescr ul {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .sectionDescr ul {
+    width: 35%;
+  }
 }
 /*# sourceMappingURL=muhammet.css.map */

@@ -8,81 +8,121 @@ body{
     height: 100vh;
     background-color: #018281;
     main{
-        #boxBox{
-            background-color: #C0C0C0;
-            border: 1px solid black;
-            margin: 2px;
-            #windowsBox{
+        #desktop{
+            display: flex;
+            flex-direction: column;
+            width: 100vw;
+            height: 100vh;
+            justify-content: space-between;      
+            #desktopmain{
+
                 display: flex;
-                justify-content: space-between;
-                background-color: rgb(0, 9, 176);
-                margin: 1px;
-
-                p{
-                    color: white;
-                }
-                #windowsButtons{
-                    display: flex;
-                    .button{
-                        display: block;
-                        margin: 1px;
-                        width: 14px;
-                        height: 14px;
-                        background-color: #C0C0C0;
-                        border-right: 1px solid black;
-                        border-bottom: 1px solid black;
-                        border-top: 1px solid white;
-                        border-left: 1px solid white;
-                        font-family: sans-serif;
-                        font-size: 13px;
-                        font-weight: bold;
-                        text-align: center;
+                #icons{
+                    margin-top: 10px;
+                    margin-left: 10px;
+                    div{
+                        margin-bottom: 3vh;
+                    }
+                    a{
+                        display: b;
+                        margin-bottom: 3vh;
                     }
                 }
-
+                #boxBox{
+                    max-width: 750px;
+                    height: 380px;
+                    background-color: #C0C0C0;
+                    border: 1px solid black;
+                    margin: auto;
+                    margin-top: 20px;
+                    #windowsBox{
+                        display: flex;
+                        justify-content: space-between;
+                        background-color: rgb(0, 9, 176);
+                        margin: 1px;
+                        p{
+                            color: white;
+                        }
+                        #windowsButtons{
+                            display: flex;
+                            .button{
+                                display: block;
+                                margin: 1px;
+                                width: 14px;
+                                height: 14px;
+                                background-color: #C0C0C0;
+                                border-right: 1px solid black;
+                                border-bottom: 1px solid black;
+                                border-top: 1px solid white;
+                                border-left: 1px solid white;
+                                font-family: sans-serif;
+                                font-size: 13px;
+                                font-weight: bold;
+                                text-align: center;
+                            }
+                        }
+                    }
+                    #contentBox{
+                        .mainBox{
+                            border: 2px solid #C0C0C0;
+                            background-color: black;
+                            overflow-y: scroll;
+                            p{
+                                color: white;
+                            }
+                        }
+                        #roomBox{
+                            height: 260px;
+                            display: flex;
+                            flex-direction: column-reverse;
+                            color: white;
+                        }
+                        #actionBox{
+                            height: 70px;
+                        }
+                        #inputBox{
+                            display: flex;
+                            input{
+                                flex-grow: 1;
+                            }
+                            .button{
+                                display: block;
+                                margin: 1px;
+                                background-color: #C0C0C0;
+                                border-right: 1px solid black;
+                                border-bottom: 1px solid black;
+                                border-top: 1px solid white;
+                                border-left: 1px solid white;
+                                font-family: sans-serif;
+                                font-size: 13px;
+                                font-weight: bold;
+                                text-align: center;
+                                p{color: black;}
+                            }
+                            #submit{
+                                cursor: pointer;
+                            }
+                            
+                        }
+                    }
+                }
             }
-            #contentBox{
-                .mainBox{
-                    border: 2px solid #C0C0C0;
-                    background-color: black;
-                    overflow: scroll;
-                    p{
-                        color: white;
-                    }
-                }
-                #roomBox{
-                    height: 260px;
-                    display: flex;
-                    flex-direction: column-reverse;
-                    color: white;
-                }
-                #actionBox{
-                    height: 70px;
-                }
-                #inputBox{
-                    display: flex;
-                    input{
-                        flex-grow: 1;
-                    }
-                    .button{
-                        display: block;
-                        margin: 1px;
-                        background-color: #C0C0C0;
-                        border-right: 1px solid black;
-                        border-bottom: 1px solid black;
-                        border-top: 1px solid white;
-                        border-left: 1px solid white;
-                        font-family: sans-serif;
-                        font-size: 13px;
-                        font-weight: bold;
-                        text-align: center;
-
-                    }
+            #taskbar{
+                background-color: #C0C0C0;
+                img{
+                    display: block;
+                    margin: auto;
+                    margin-left: 2px;
                 }
             }
         }
     }
     .hint{
         color: green;
+    }
+}
+@media only screen and (max-width: 600px) {
+    #icons{
+        display: none;
     }
 }

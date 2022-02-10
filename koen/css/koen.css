@@ -11,13 +11,51 @@ body {
   background-color: #018281;
 }
 
-body main #boxBox {
-  background-color: #C0C0C0;
-  border: 1px solid black;
-  margin: 2px;
+body main #desktop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-body main #boxBox #windowsBox {
+body main #desktop #desktopmain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body main #desktop #desktopmain #icons {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+body main #desktop #desktopmain #icons div {
+  margin-bottom: 3vh;
+}
+
+body main #desktop #desktopmain #icons a {
+  display: b;
+  margin-bottom: 3vh;
+}
+
+body main #desktop #desktopmain #boxBox {
+  max-width: 750px;
+  height: 380px;
+  background-color: #C0C0C0;
+  border: 1px solid black;
+  margin: auto;
+  margin-top: 20px;
+}
+
+body main #desktop #desktopmain #boxBox #windowsBox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28,17 +66,17 @@ body main #boxBox #windowsBox {
   margin: 1px;
 }
 
-body main #boxBox #windowsBox p {
+body main #desktop #desktopmain #boxBox #windowsBox p {
   color: white;
 }
 
-body main #boxBox #windowsBox #windowsButtons {
+body main #desktop #desktopmain #boxBox #windowsBox #windowsButtons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-body main #boxBox #windowsBox #windowsButtons .button {
+body main #desktop #desktopmain #boxBox #windowsBox #windowsButtons .button {
   display: block;
   margin: 1px;
   width: 14px;
@@ -54,17 +92,17 @@ body main #boxBox #windowsBox #windowsButtons .button {
   text-align: center;
 }
 
-body main #boxBox #contentBox .mainBox {
+body main #desktop #desktopmain #boxBox #contentBox .mainBox {
   border: 2px solid #C0C0C0;
   background-color: black;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
-body main #boxBox #contentBox .mainBox p {
+body main #desktop #desktopmain #boxBox #contentBox .mainBox p {
   color: white;
 }
 
-body main #boxBox #contentBox #roomBox {
+body main #desktop #desktopmain #boxBox #contentBox #roomBox {
   height: 260px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -76,23 +114,23 @@ body main #boxBox #contentBox #roomBox {
   color: white;
 }
 
-body main #boxBox #contentBox #actionBox {
+body main #desktop #desktopmain #boxBox #contentBox #actionBox {
   height: 70px;
 }
 
-body main #boxBox #contentBox #inputBox {
+body main #desktop #desktopmain #boxBox #contentBox #inputBox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-body main #boxBox #contentBox #inputBox input {
+body main #desktop #desktopmain #boxBox #contentBox #inputBox input {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
 
-body main #boxBox #contentBox #inputBox .button {
+body main #desktop #desktopmain #boxBox #contentBox #inputBox .button {
   display: block;
   margin: 1px;
   background-color: #C0C0C0;
@@ -106,7 +144,31 @@ body main #boxBox #contentBox #inputBox .button {
   text-align: center;
 }
 
+body main #desktop #desktopmain #boxBox #contentBox #inputBox .button p {
+  color: black;
+}
+
+body main #desktop #desktopmain #boxBox #contentBox #inputBox #submit {
+  cursor: pointer;
+}
+
+body main #desktop #taskbar {
+  background-color: #C0C0C0;
+}
+
+body main #desktop #taskbar img {
+  display: block;
+  margin: auto;
+  margin-left: 2px;
+}
+
 body .hint {
   color: green;
+}
+
+@media only screen and (max-width: 600px) {
+  #icons {
+    display: none;
+  }
 }
 /*# sourceMappingURL=koen.css.map */
