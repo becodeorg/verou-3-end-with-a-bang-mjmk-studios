@@ -9,6 +9,8 @@ const readInput = (event) => {
     let command = document.getElementById("input").value;
     console.log(command);
     commandStart(command);
+    document.getElementById("input").value = " ";
+
 }
 // if command is 'start'
 const commandStart = (command) => {
@@ -371,3 +373,8 @@ const commandStart = (command) => {
 }
 // submit button event listener
 document.getElementById("submit").addEventListener("click", readInput);
+document.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        readInput();
+    }
+})
