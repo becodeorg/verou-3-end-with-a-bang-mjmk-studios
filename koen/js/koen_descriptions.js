@@ -28,7 +28,7 @@ export const descriptions = [
             "whiteboard":
             {
                 "description": "The <span style='color: red';>whiteboard</span> has some stuff written on it. Maybe you can <span style='color: rgb(153, 153, 0)';>Read</span> it. ",
-                "text": "In the top left corner you can see the wifi password: 'becodeforall!'. In the middle of the whiteboard you see a drawing that looks a bit like an abstract representation of chaos itself. Probably someone tried to describe some github functionalities. The bottom left corner of the board had some numbers written on it. you can only make out the last number. It's a '1'."
+                "text": "In the top left corner you can see the wifi password: 'becodeforall!'. In the middle of the whiteboard you see a drawing that looks a bit like an abstract representation of chaos itself. Probably someone tried to describe some github functionalities. The bottom left corner of the board had some numbers written on it. you can only make out the last number. It's a '6'."
             },
             "tables":
             {

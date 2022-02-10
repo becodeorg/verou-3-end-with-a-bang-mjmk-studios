@@ -58,7 +58,6 @@ header #home i:hover {
   margin-bottom: 30px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(red), color-stop(yellow), to(green));
   background-image: linear-gradient(red, yellow, green);
-  opacity: 0.9;
   border-radius: 15px;
   -webkit-box-shadow: rgba(46, 45, 45, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
           box-shadow: rgba(46, 45, 45, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
@@ -114,6 +113,9 @@ header #home i:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -320,6 +322,10 @@ i.fa-step-backward {
           animation-delay: 0s;
 }
 
+#wave {
+  margin-bottom: 20px;
+}
+
 footer {
   left: 0;
   bottom: 0;
@@ -363,6 +369,13 @@ footer .contactInfo .contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10px;
 }
 
 footer .contactInfo .contact img {
@@ -374,5 +387,24 @@ footer .contactInfo .contact img:hover {
   cursor: pointer;
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
+}
+
+@media screen and (max-width: 540px) {
+  header {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .player {
+    margin: 0;
+  }
+  .wrapper {
+    margin: 0;
+    width: 100%;
+    border-radius: 0%;
+  }
+  #group-members {
+    display: none;
+  }
 }
 /*# sourceMappingURL=jawid.css.map */
