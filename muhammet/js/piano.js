@@ -122,7 +122,7 @@ document.addEventListener("keydown", (event) => {
 
 // Init.
 (() => {
-  const synth = new Tone.PolySynth().toDestination();
+  const synth = new Tone.FMSynth().toDestination();
 
   onKeyDown(synth);
   onKeyUp(synth);
