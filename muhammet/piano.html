@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piano | MKMJ Studios</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+
+    <link rel="stylesheet" href="./css/muhammet.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="d-flex justify-content-center" style="margin-top: 3rem;">
+        <a class="btn btn-secondary mx-1" href="../index.html">Home</a>
+        <a class="btn btn-primary mx-1" href="./muhammet.html">Synthesizer</a>
+        <a class="btn btn-primary mx-1" href="./jokes.html">Jokes</a>
+    </div>
+
+    <header class="title">
+        <h1>Polyphonic Synthesizer</h1>
+    </header>
+
+    <section class="sectionDescr">
+        <p>Press the keys on your keyboard to play the sound. You can play multiple sounds and play upper or lower
+            octaves with letter 'w' or 'x'.
+            The keys are set up for azerty keyboard layout.
+        </p>
+    </section>
+
+    <div class="keyboard d-flex justify-content-center">
+        <div>
+            <div class="topRow d-flex justify-content-center mb-2">
+                <div class="blackKey mx-1">Z</div>
+                <div class="blackKey mx-1">E</div>
+            </div>
+            <div class="bottomRow d-flex justify-content-center">
+                <div class="whiteKey mx-1">Q</div>
+                <div class="whiteKey mx-1">S</div>
+                <div class="whiteKey mx-1">D</div>
+            </div>
+            <div class="topRow d-flex justify-content-center mt-2">
+                <div class="redKey mx-1">W</div>
+                <div class="redKey mx-1">X</div>
+            </div>
+        </div>
+        <div>
+            <div class="topRow d-flex justify-content-center mb-2">
+                <div class="blackKey mx-1">T</div>
+                <div class="blackKey mx-1">Y</div>
+                <div class="blackKey mx-1">U</div>
+            </div>
+            <div class="bottomRow d-flex justify-content-center">
+                <div class="whiteKey mx-1">F</div>
+                <div class="whiteKey mx-1">G</div>
+                <div class="whiteKey mx-1">H</div>
+                <div class="whiteKey mx-1">J</div>
+            </div>
+        </div>
+        <div>
+            <div class="topRow d-flex justify-content-center mb-2">
+                <div class="blackKey mx-1">O</div>
+                <div class="blackKey mx-1">P</div>
+            </div>
+            <div class="bottomRow d-flex justify-content-center">
+                <div class="whiteKey mx-1">K</div>
+                <div class="whiteKey mx-1">L</div>
+                <div class="whiteKey mx-1">M</div>
+            </div>
+        </div>
+        <div>
+            <div class="topRow d-flex justify-content-center mb-2">
+                <div class="blackKey mx-1">$</div>
+            </div>
+            <div class="bottomRow d-flex justify-content-center">
+                <div class="whiteKey mx-1">ù</div>
+                <div class="whiteKey mx-1">µ</div>
+            </div>
+        </div>
+    </div>
+
+    <footer class=" footer d-flex justify-content-center text-center fixed-bottom">
+        <p>Created by
+            <a href="https://github.com/Muhammetacin">Muhammet</a>. In collaboration with
+            <a href="https://github.com/KoenH81">Koen</a>,
+            <a href="https://github.com/Ranzop">Michael</a> and
+            <a href="https://github.com/JawidForotan">Jawid</a>
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.9/Tone.js"
+        integrity="sha512-nUjml8mN4CNYqBAy0ndDrd8pJV/eTtBNDsnvNtPqozx9/BccUeWSoKW14qWkQUnhuh8E3m+yra3qdzM68lqPEQ=="
+        crossorigin="anonymous"></script>
+    <script type="module" src="./js/piano.js"></script>
+</body>
+
+</html>

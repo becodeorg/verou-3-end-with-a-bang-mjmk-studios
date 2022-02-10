@@ -1,3 +1,4 @@
+// Song array
 const songList = [
   {
     img: "/jawid/images/dua-lipa.jpg",
@@ -77,18 +78,17 @@ const songList = [
   },
 ];
 
+// Search the elements in html
 let now_playing = document.querySelector(".now-playing");
 let track_art = document.querySelector(".track-art");
 let track_name = document.querySelector(".track-name");
 let track_artist = document.querySelector(".track-artist");
 
-let prev_btn = document.querySelector(".prev-track");
-let playPause_btn = document.querySelector(".playPause-track");
-let next_btn = document.querySelector(".next-track");
-
+// Add event to the range slider
 const seek_slider = document.querySelector(".seek_slider");
 seek_slider.addEventListener("change", seekTo);
 
+// Add event to the volume slider
 const volume_slider = document.querySelector(".volume_slider");
 volume_slider.addEventListener("change", setVolume);
 
@@ -142,14 +142,18 @@ const randomTrack = () => {
 const randomSong = document.querySelector(".random-track");
 randomSong.addEventListener("click", randomTrack);
 
+// Repeat song function
 const repeatTrack = () => {
   let current_index = track_index;
   loadTrack(current_index);
   playTrack();
 };
+
+// Add event to the repeat icon to repeat the song
 const repeatSong = document.querySelector(".repeat-track");
 repeatSong.addEventListener("click", repeatTrack);
 
+// Pause or play function
 const playPauseTrack = () => {
   if (isPlaying) {
     pauseTrack();
@@ -157,23 +161,32 @@ const playPauseTrack = () => {
     playTrack();
   }
 };
+
+// Add event to the play and pause button
+let playPause_btn = document.querySelector(".playPause-track");
 playPause_btn.addEventListener("click", playPauseTrack);
 
+// Animate the image and wave icon by clicking the play button.
 const playTrack = () => {
   curr_track.play();
   isPlaying = true;
   track_art.classList.add("rotate");
   wave.classList.add("loader");
+  // Change the play button to pause
   playPause_btn.innerHTML = '<i class="fa fa-pause-circle fa-5x"></i>';
 };
+
+// Pause song function
 const pauseTrack = () => {
   curr_track.pause();
   isPlaying = false;
   track_art.classList.remove("rotate");
   wave.classList.remove("loader");
+  // Change the pause button to play
   playPause_btn.innerHTML = '<i class="fa fa-play-circle fa-5x"></i>';
 };
 
+// Get the next song function
 function nextTrack() {
   if (track_index < songList.length - 1 && isRandom === false) {
     track_index += 1;
@@ -186,8 +199,12 @@ function nextTrack() {
   loadTrack(track_index);
   playTrack();
 }
+
+// Add event the next button
+let next_btn = document.querySelector(".next-track");
 next_btn.addEventListener("click", nextTrack);
 
+// Get previous song function
 function prevTrack() {
   if (track_index > 0) {
     track_index -= 1;
@@ -197,15 +214,23 @@ function prevTrack() {
   loadTrack(track_index);
   playTrack();
 }
+
+// Add event to the previous button
+let prev_btn = document.querySelector(".prev-track");
 prev_btn.addEventListener("click", prevTrack);
 
+// Change the song duration function
 function seekTo() {
-  let seekto = curr_track.duration * (seek_slider.value / 100);
-  curr_track.currentTime = seekto;
+  let seekTo = curr_track.duration * (seek_slider.value / 100);
+  curr_track.currentTime = seekTo;
 }
+
+// Adjust the volume function
 function setVolume() {
   curr_track.volume = volume_slider.value / 100;
 }
+
+// Update the value and play new song
 function setUpdate() {
   let seekPosition = 0;
   if (!isNaN(curr_track.duration)) {
