@@ -1,16 +1,9 @@
-const makeJSElementPlusImg = (attribute, parent) => {
-  const x = document.createElement("div");
-  x.setAttribute("id", attribute);
-  const y = document.createElement("img");
-  x.appendChild(y);
-  parent.appendChild(x);
-}
+import {
+  makeJSElement,
+  makeJSElementPlusImg,
+  xyz
+} from "./grid.js";
 
-const makeJSElement = (attribute, parent) => {
-  const x = document.createElement("div");
-  x.setAttribute("id", attribute);
-  parent.appendChild(x);
-}
 
 const getBody = document.querySelector("body");
 console.log(getBody);
@@ -59,11 +52,15 @@ const getAnimeWallpaper = (event) => {
   let getAnime = getSearch.value.toLowerCase();
   getAnime = getAnime.replace(/\s+/g, "-");
   finishedAnimeInput = getAnime + "-wallpapers";
-  callAnimeOutThere(finishedAnimeInput);
+  callAnimeOutThere(finishedAnimeInput, getAnime);
   getAnimeRllyOutThere(finishedAnimeInput);
-
+  gimmeValue(getAnime);
 }
 
+
+const gimmeValue = (getAnime) => {
+  return getAnime;
+}
 
 submitButton.addEventListener('click', getAnimeWallpaper);
 getSearch.addEventListener('keypress', function (e) {
@@ -72,7 +69,7 @@ getSearch.addEventListener('keypress', function (e) {
   }
 });
 
-const callAnimeOutThere = (finishedAnimeInput) => {
+const callAnimeOutThere = (finishedAnimeInput, getAnime) => {
 
 
 
@@ -95,6 +92,10 @@ const callAnimeOutThere = (finishedAnimeInput) => {
     })
     .catch(err => {
       console.error(err);
+      makeJSElement("failureNotification", getBody);
+      const notifyFailure = document.getElementById("failureNotification");
+      notifyFailure.innerHTML = `Hi, We're sorry -- - -- but we don't have wallpapers for ${getAnime}; We don't have every manga around ;-(, try another.</>
+<b> small tip: </b> Try to search for the full name of the manga. `;
     });
 };
 
@@ -151,7 +152,6 @@ holdContainer.style.display = "grid";
 
 /* TODO: 
 1. Add navigation links & buttons
-1a. let the page fetch 6 wallpapers and put them in object/array that I can loop over to fill in the carousel
 1. make if statement so that if we don't have wallpapers, the site reacts.
 2. add code to also fix for some cases where -wallpaper is appropriate
 3. style */
