@@ -42,7 +42,7 @@ body main #desktop #desktopmain #icons div {
 }
 
 body main #desktop #desktopmain #icons a {
-  display: b;
+  display: block;
   margin-bottom: 3vh;
 }
 
