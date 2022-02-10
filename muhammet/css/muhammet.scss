@@ -1,7 +1,7 @@
 @import "../../css/style";
 
 body {
-  max-height: 95vh;
+  height: 95vh !important;
 }
 
 .sectionDescr {
@@ -29,7 +29,7 @@ body {
   padding-top: 3rem;
 
   img {
-    max-width: 100%;
+    max-width: 80%;
   }
 }
 
@@ -44,6 +44,31 @@ body {
 }
 
 @media (min-width: 992px) {
+  .keyboard {
+    margin-top: 1.5rem;
+    padding: 2rem 0;
+  }
+
+  .whiteKey {
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    text-align: center;
+    font-weight: 700;
+  }
+  .blackKey {
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  .keyPressed {
+    background-color: #96ec02;
+    color: #222;
+  }
 }
 
 @media (min-width: 1200px) {
