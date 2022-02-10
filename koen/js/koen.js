@@ -9,8 +9,7 @@ const readInput = (event) => {
     let command = document.getElementById("input").value;
     console.log(command);
     commandStart(command);
-    document.getElementById("input").value = " ";
-
+    document.getElementById("input").value = "";
 }
 // if command is 'start'
 const commandStart = (command) => {
@@ -407,7 +406,7 @@ const commandStart = (command) => {
         let dash = document.createElement("div");
         dash.innerHTML = "-";
         let help = document.createElement("div");
-        help.innerHTML = "<span style='color: rgb(153, 153, 0);'>Examine</span> let's you get a better look at things. </br><span style='color: rgb(153, 153, 0);'>Look</span> let's you see the room description again.</br><span style='color: rgb(153, 153, 0);'>North, East, South, West</span> let you navigate to a different room.</br><span style='color: rgb(153, 153, 0);'>Start</span> to start or reset the game.</br> There are several commands hidden away in the game itself.";
+        help.innerHTML = "<span style='color: rgb(153, 153, 0);'>Examine</span> <span style='color: red';>something</span>, let's you get a better look at things. </br><span style='color: rgb(153, 153, 0);'>Look</span> let's you see the room description again.</br><span style='color: rgb(153, 153, 0);'>North, East, South, West</span> let you navigate to a different room.</br><span style='color: rgb(153, 153, 0);'>Start</span> to start or reset the game.</br> There are several commands hidden away in the game itself.";
         roomBox.insertBefore(dash, roomBox.firstChild);
         roomBox.insertBefore(help, roomBox.firstChild);
     }
