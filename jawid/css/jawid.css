@@ -152,6 +152,7 @@ header #music-icon {
 .prev-track:hover,
 .next-track:hover {
   opacity: 1;
+  color: #dfdbdb;
 }
 
 .slider_container {
