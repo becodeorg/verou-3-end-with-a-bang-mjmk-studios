@@ -4,10 +4,12 @@ export const descriptions = [
         {
             "Basile":
             {
-                "description": "<span style='color: red';>Basile</span> is looking at you eagerly. Ready to answer any question you might have...as long as it has nothing to do with CSS."
+                "description": "<span style='color: red';>Basile</span> is looking at you eagerly. Ready to answer any question you might have...as long as it has nothing to do with CSS.",
+                "ask": "Basile's eagerness to help is almost palpable. <span style='color: purple';>The pin code?...for the elevator!...aha yes...euhm...shit...I'm pretty sure it starts with a 5.</span> Right, well that's helpful."
             },
             "Bert": {
-                "description": "<span style='color: red';>Bert</span> looks at you bleary eyed. He is mumbling something about 'Nora' and 'getting no sleep'."
+                "description": "<span style='color: red';>Bert</span> looks at you bleary eyed. He is mumbling something about 'Nora' and 'getting no sleep'.",
+                "ask": "Bert looks at you confused. His sleep deprived brain must be causing him some issues. <span style='color: purple';>Euhm...the pin code?...damn...I think it had the numbers 7 and 4 in it. Sorry, I can't focus. Nora kept me up all night.</span> Ah yes, the joys of parenthood."
             },
             "Erwin": {
                 "description": "<span style='color: red';>Erwin</span> is standing here. He looks like he just walked a 1000 miles. He's on the phone.",

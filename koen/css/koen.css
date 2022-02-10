@@ -106,6 +106,14 @@ body main #boxBox #contentBox #inputBox .button {
   text-align: center;
 }
 
+body main #boxBox #contentBox #inputBox .button p {
+  color: black;
+}
+
+body main #boxBox #contentBox #inputBox #submit {
+  cursor: pointer;
+}
+
 body .hint {
   color: green;
 }
