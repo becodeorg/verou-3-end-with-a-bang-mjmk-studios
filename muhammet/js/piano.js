@@ -1,3 +1,7 @@
+import { turnGreenKey, turnKeyBackToOriginal } from "./_keys.js";
+
+// ------------------------------------------------------
+
 let octave = 4;
 
 const keys = [];
@@ -52,6 +56,7 @@ const onKeyDown = (() => {
 
     listener = (event) => {
       const { key } = event;
+      turnGreenKey(key);
 
       // Only trigger once per keydown event.
       if (!keys[key]) {
@@ -86,6 +91,8 @@ const onKeyUp = (() => {
       const { key } = event;
       if (keys[key]) {
         keys[key] = false;
+
+        turnKeyBackToOriginal(key);
 
         const note = keyToNote(key);
         if (synth instanceof Tone.PolySynth) {
