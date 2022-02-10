@@ -389,4 +389,23 @@ footer .contactInfo .contact img:hover {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
 }
+
+@media screen and (max-width: 540px) {
+  header {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .player {
+    margin: 0;
+  }
+  .wrapper {
+    margin: 0;
+    width: 100%;
+    border-radius: 0%;
+  }
+  #group-members {
+    display: none;
+  }
+}
 /*# sourceMappingURL=jawid.css.map */
