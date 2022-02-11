@@ -34,5 +34,5 @@ Instead of plain CSS, Sass is used to improve speed and stability. Color variabl
 
 ## Links to Netlify
 
-Muhammet:   <https://objective-elion-e2232f.netlify.app/>
+Muhammet:   <https://mkmjstudios.netlify.app/>
 Koen:       <https://time-wasting-101.netlify.app/>
