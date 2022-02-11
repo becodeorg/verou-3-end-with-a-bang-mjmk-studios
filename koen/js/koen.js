@@ -448,3 +448,4 @@ document.addEventListener('keypress', function (e) {
 document.getElementById("start").addEventListener("click", startPop);
 // Created event listener
 document.getElementById("created").addEventListener("click", createdPop);
+// away event listener

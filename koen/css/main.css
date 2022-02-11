@@ -6,7 +6,7 @@
 }
 #desktop{
     display: flex;
-    background-color: antiquewhite;
+    background-color: black;
     width: 100vw;
     height: 100vh;
 }
@@ -46,6 +46,7 @@
     font-weight: bold;
     text-align: center;
     cursor: pointer;
+    color: black;
 }
 #ok{
     margin: auto;
