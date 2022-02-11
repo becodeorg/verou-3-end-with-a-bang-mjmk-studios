@@ -5,6 +5,16 @@ const makeJSElementPlusImg = (attribute, parent) => {
     x.appendChild(y);
     parent.appendChild(x);
 }
+const makeJSIdClassPlusImg = (attribute,o, z, m, parent) => {
+    const x = document.createElement("div");
+    x.setAttribute("id", attribute);
+    x.setAttribute ("class", o);
+    const y = document.createElement("img");
+    y.setAttribute("class", z);
+    y.setAttribute ("id", m);
+    x.appendChild(y);
+    parent.appendChild(x);
+}
 const setElementClass = (element, cssClass) => {
     let x = document.querySelectorAll(element);
     console.log(x);
@@ -26,4 +36,4 @@ const makeJSClassPlusImg = (attribute, parent) => {
     x.appendChild(y);
 }
 
-export {makeJSElement, makeJSElementPlusImg, setElementClass, makeJSClassPlusImg};
+export {makeJSElement, makeJSElementPlusImg, setElementClass, makeJSClassPlusImg, makeJSIdClassPlusImg};
