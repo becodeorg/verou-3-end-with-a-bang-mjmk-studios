@@ -64,7 +64,7 @@ header #music-icon {
 
 .wrapper {
   border: 1px solid transparent;
-  padding: 20px;
+  padding: 20px 80px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(red), color-stop(yellow), to(green));
   background-image: linear-gradient(red, yellow, green);
   border-radius: 15px;
@@ -224,7 +224,7 @@ i.fa-step-backward {
 }
 
 .randomActive {
-  color: black;
+  color: #fa0303;
 }
 
 .rotate {
@@ -405,11 +405,15 @@ footer .contactInfo .contact img:hover {
   }
   .wrapper {
     margin: 0;
+    padding: 10px 20px;
     width: 100%;
     border-radius: 0%;
   }
   #group-members {
     display: none;
+  }
+  body {
+    background-image: none;
   }
 }
 /*# sourceMappingURL=jawid.css.map */
