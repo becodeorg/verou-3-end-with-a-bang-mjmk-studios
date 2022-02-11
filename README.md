@@ -1,6 +1,6 @@
 # End with a bang! - MKMJ Studios
 
-A place where you relax, chill and procrastinate. Play games, listen to music, read some manga or ...
+A place where you relax, chill and procrastinate. Play games, listen to music, read some manga or play music-read jokes.
 
 ## Useful links
 

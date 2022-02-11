@@ -7,6 +7,15 @@ $orange-light: #ffc107;
 $orange-dark: #f56e00;
 $bg-dark: #222;
 
+body {
+    background-image: radial-gradient(farthest-corner at 40px 40px,
+    #f56e00 0%, #ffc107 100%);
+}
+
+#input {
+    z-index: 11;
+}
+
 .navbar {
 z-index:10;
 }
@@ -74,3 +83,26 @@ left: 0rem;
     color:#ffc107;
 }
 
+.wPBig {
+    padding: 1rem;
+}
+
+
+@media screen and (min-width: 767px) {
+#container{
+    grid-template-columns: 50% 50%;
+}
+
+
+.wPBig {
+    padding: 1rem;
+}
+}
+@media screen and (min-width: 1023px) {
+#container{
+    grid-template-columns: 33% 33% 33%;
+}
+.wPBig {
+    padding: 10px !important;
+}
+}

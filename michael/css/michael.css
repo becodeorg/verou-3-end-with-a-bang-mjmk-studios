@@ -1,3 +1,11 @@
+body {
+  background-image: radial-gradient(farthest-corner at 40px 40px, #f56e00 0%, #ffc107 100%);
+}
+
+#input {
+  z-index: 11;
+}
+
 .navbar {
   z-index: 10;
 }
@@ -77,5 +85,29 @@ input {
 
 .dropdown-toggle {
   color: #ffc107;
+}
+
+.wPBig {
+  padding: 1rem;
+}
+
+@media screen and (min-width: 767px) {
+  #container {
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+  }
+  .wPBig {
+    padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  #container {
+    -ms-grid-columns: 33% 33% 33%;
+        grid-template-columns: 33% 33% 33%;
+  }
+  .wPBig {
+    padding: 10px !important;
+  }
 }
 /*# sourceMappingURL=michael.css.map */
