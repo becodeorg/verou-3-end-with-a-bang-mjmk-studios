@@ -61,6 +61,7 @@ console.log (getWallPapersArray);
 let wp0 = document.getElementById("wallPaperOne");
 console.log(wp0);
 
+
 let Wp0 = document.getElementById("wPOne");
 console.log (wPOne);
 wp0.style.width="20rem";

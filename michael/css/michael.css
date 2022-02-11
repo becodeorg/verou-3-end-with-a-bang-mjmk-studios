@@ -2,11 +2,11 @@ body {
   background-image: radial-gradient(farthest-corner at 40px 40px, #f56e00 0%, #ffc107 100%);
 }
 
-#input {
+.form {
   z-index: 11;
 }
 
-.navbar {
+.form-container {
   z-index: 10;
 }
 
@@ -89,6 +89,24 @@ input {
 
 .wPBig {
   padding: 1rem;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  height: 80%;
+  top: 7rem;
+}
+
+.zoomIn img {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.zoomIn:hover img {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
 }
 
 @media screen and (min-width: 767px) {

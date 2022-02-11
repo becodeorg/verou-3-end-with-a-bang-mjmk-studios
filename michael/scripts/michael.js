@@ -7,6 +7,75 @@ import {
 } from "./base-functions.js";
 
 
+
+const getRandomSlug = (data) => {
+  for (let i = 0; i < 5; i++) {
+    const randomNumber = Math.floor(Math.random() * 12)
+
+    let slug = data[randomNumber].slug;
+
+
+    giveCarousel(slug, i); // hier wordt bij elke loop de waarde bijgevoegd
+    // push zet het in de array
+  }
+}
+
+
+// op lijn 12 wordt er iets gereturned, daardoor wordt de waarde van lijn 32 vervangen door de "returned value""
+// hierdoor kan de data overal aangesproken worden (destructuring)
+
+const testCarousel = () => {
+
+
+  fetch("https://yume-anime-wallpapers.p.rapidapi.com/popular", {
+      "method": "GET",
+      "headers": {
+        "x-rapidapi-host": "yume-anime-wallpapers.p.rapidapi.com",
+        "x-rapidapi-key": "18d03a0ac2msh9bc6959786043d3p1eeb0ejsnb79ae61ffe30"
+      }
+    })
+    .then((response) => response.json())
+    .then((data) => {
+      // this one is not closed
+
+      getRandomSlug(data);
+    })
+    .catch(err => {
+      console.error(err);
+    });
+}
+
+// !!!! correct de data doorgeven
+// een constante maken om de resultaten van een fie op te slaan -> met return
+
+const giveCarousel = (slug, i) => { // we need to get the slug here! not the array
+  const aPIUrl = "https://yume-anime-wallpapers.p.rapidapi.com/popular?slug=" + slug;
+  console.log(aPIUrl);
+  fetch(aPIUrl, {
+      "method": "GET",
+      "headers": {
+        "x-rapidapi-host": "yume-anime-wallpapers.p.rapidapi.com",
+        "x-rapidapi-key": "18d03a0ac2msh9bc6959786043d3p1eeb0ejsnb79ae61ffe30"
+      }
+    })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      const randomNumberTwo = Math.floor(Math.random() * 15)
+      let fetchWallpaper = data[0].wallpapers[randomNumberTwo];
+      let x = document.querySelectorAll(".carouselItem");
+      console.log(x);
+      x[i].setAttribute("src", fetchWallpaper);
+
+    })
+    .catch(err => {
+      console.error(err);
+    });
+}
+
+
+
+
 const getBody = document.querySelector("body");
 console.log(getBody);
 
@@ -37,12 +106,30 @@ holdContainer.style.display = "inline-grid";
 
 
 
-let finishedAnimeInput;
+
 const getAnimeWallpaper = (event) => {
   event.preventDefault();
   let getAnime = getSearch.value.toLowerCase();
-  getAnime = getAnime.replace(/\s+/g, "-");
-  finishedAnimeInput = getAnime + "-wallpapers";
+  let finishedAnimeInput;
+  if (getAnime == "akatsuki") {
+    finishedAnimeInput = "akatsuki-wallpaper-hd"
+  } else if (getAnime == "mushishi") {
+    finishedAnimeInput = "mushishi-wallpaper"
+  } else if (getAnime == "detective conan") {
+    finishedAnimeInput = "detective-conan-wallpaper"
+  } else if (getAnime == "dragon ball z") {
+    finishedAnimeInput = "dragon-ball-z-hd-wallpaper"
+  } else if (getAnime == "naruto") {
+    finishedAnimeInput = "naruto-hd-wallpaper"
+  } else if (getAnime == "clannad after story") {
+    finishedAnimeInput = "clannad-after-story-wallpaper"
+  } else if (getAnime == "fairy tail") {
+    finishedAnimeInput = "fairy-tail-wallpaper"
+  } else {
+    getAnime = getAnime.replace(/\s+/g, "-");
+    finishedAnimeInput = getAnime + "-wallpapers";
+  }
+  console.log(finishedAnimeInput);
   callAnimeOutThere(finishedAnimeInput, getAnime);
   getAnimeRllyOutThere(finishedAnimeInput);
   gimmeValue(getAnime);
@@ -59,6 +146,7 @@ getSearch.addEventListener('keypress', function (e) {
     getAnimeWallpaper(e);
   }
 });
+
 
 const searchDisplay = () => {
   let x = document.querySelector("#byeByeCarousel");
@@ -88,7 +176,7 @@ const callAnimeOutThere = (finishedAnimeInput, getAnime) => {
       "method": "GET",
       "headers": {
         "x-rapidapi-host": "yume-anime-wallpapers.p.rapidapi.com",
-        "x-rapidapi-key": "7c7087b974mshbf48bda2f96d4f1p19b22cjsnd56c104c91f2"
+        "x-rapidapi-key": "18d03a0ac2msh9bc6959786043d3p1eeb0ejsnb79ae61ffe30"
       }
     })
     .then((response) => response.json())
@@ -116,7 +204,8 @@ const callAnimeOutThere = (finishedAnimeInput, getAnime) => {
           console.log(wp0);
 
           let Wp0 = document.getElementById("wPOne");
-          console.log(wPOne);
+          console.log(Wp0);
+          Wp0.classList.add = "zoomIn";
           wp0.style.width = "20rem";
           console.log(Wp0);
           wp0.style.height = "20rem";
@@ -124,10 +213,12 @@ const callAnimeOutThere = (finishedAnimeInput, getAnime) => {
           Wp0.style.height = "100%";
 
           let wp1 = document.getElementById("wallPaperTwo");
+
           console.log(wp0);
 
           let Wp1 = document.getElementById("wPTwo");
-          console.log(wPOne);
+          Wp1.classList.add = "zoomIn";
+          console.log(Wp1);
           wp1.style.width = "20rem";
           console.log(Wp0);
           wp1.style.height = "20rem";
@@ -138,6 +229,7 @@ const callAnimeOutThere = (finishedAnimeInput, getAnime) => {
           console.log(wp2);
 
           let Wp2 = document.getElementById("wPThree");
+          Wp2.classList.add = "zoomIn";
           console.log(Wp2);
           wp2.style.width = "20rem";
           wp2.style.height = "20rem";
@@ -148,6 +240,7 @@ const callAnimeOutThere = (finishedAnimeInput, getAnime) => {
           console.log(wp3);
 
           let Wp3 = document.getElementById("wPFour");
+          Wp3.classList.add = "zoomIn";
           console.log(Wp3);
           wp3.style.width = "20rem";
           wp3.style.height = "20rem";
@@ -158,6 +251,7 @@ const callAnimeOutThere = (finishedAnimeInput, getAnime) => {
           console.log(wp4);
 
           let Wp4 = document.getElementById("wPFive");
+          Wp4.classList.add = "zoomIn";
           console.log(Wp4);
           wp4.style.width = "20rem";
           wp4.style.height = "20rem";
@@ -168,6 +262,7 @@ const callAnimeOutThere = (finishedAnimeInput, getAnime) => {
           console.log(wp5);
 
           let Wp5 = document.getElementById("wPSix");
+          Wp5.classList.add = "zoomIn";
           console.log(Wp5);
           wp5.style.width = "20rem";
           wp5.style.height = "20rem";
@@ -178,6 +273,7 @@ const callAnimeOutThere = (finishedAnimeInput, getAnime) => {
           console.log(wp6);
 
           let Wp6 = document.getElementById("wPSeven");
+          Wp6.classList.add = "zoomIn";
           console.log(Wp6);
           wp6.style.width = "20rem";
           wp6.style.height = "20rem";
@@ -188,6 +284,7 @@ const callAnimeOutThere = (finishedAnimeInput, getAnime) => {
           console.log(wp7);
 
           let Wp7 = document.getElementById("wPEight");
+          Wp7.classList.add = "zoomIn";
           console.log(Wp7);
           wp7.style.width = "20rem";
           wp7.style.height = "20rem";
@@ -222,6 +319,7 @@ const callAnimeOutThere = (finishedAnimeInput, getAnime) => {
       notifyFailure.style.color = "#a5a6f6";
       notifyFailure.style.boxShadow = "10px 5px 5px";
       notifyFailure.style.textShadow = "1px 0.5px white";
+      notifyFailure.style.zIndex = "10";
     });
 };
 
@@ -232,7 +330,7 @@ const getAnimeRllyOutThere = () => {
       "method": "GET",
       "headers": {
         "x-rapidapi-host": "yume-anime-wallpapers.p.rapidapi.com",
-        "x-rapidapi-key": "7c7087b974mshbf48bda2f96d4f1p19b22cjsnd56c104c91f2"
+        "x-rapidapi-key": "18d03a0ac2msh9bc6959786043d3p1eeb0ejsnb79ae61ffe30"
       }
     })
     .then(response => response.json())
@@ -256,16 +354,14 @@ const getAnimeRllyOutThere = () => {
 
 /* getAnimeRllyOutThere(); */
 
-
+/* testCarousel(); */
 
 
 
 
 /* TODO: 
-1a. fix searchbar/carousel overlap
-1. fix + wallpaper addition, so that it also calls for that
-2. style/ hover fx and such
-3. get randomWp for carousel
+3. grid -> one even bigger screens, have them just form one single row.
+4. clicking the wallpaper opens a tab with the url
 */
 
 
@@ -296,19 +392,3 @@ const getAnimeRllyOutThere = () => {
     });
     
 */
-
-
-
-//TODO: add the additional values to the searched string
-
-
-
-/* function wallpaperChanger(data, getAnime) {
-  console.log(getAnime);
-  if (data.indexOf(getAnime) !== -1) {
-    console.log ("chicken");
-  }
-} */
-
-
-// TODO: write a function that takes the data from the searchbar and puts it in the API
