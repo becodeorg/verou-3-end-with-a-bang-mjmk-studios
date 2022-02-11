@@ -416,7 +416,6 @@ const startPop = () => {
     const popB = (document.getElementById("startPop").style.display == "none");
     if (popB) {
         document.getElementById("startPop").style.display = "block";
-        console.log("block");
     }
     else {
         document.getElementById("startPop").style.display = "none";
@@ -427,10 +426,8 @@ const startPop = () => {
 // created pop
 const createdPop = () => {
     const popC = (document.getElementById("createdPop").style.display == "none");
-    console.log("jep");
     if (popC) {
         document.getElementById("createdPop").style.display = "block";
-        console.log("block");
     }
     else {
         document.getElementById("createdPop").style.display = "none";
@@ -448,4 +445,3 @@ document.addEventListener('keypress', function (e) {
 document.getElementById("start").addEventListener("click", startPop);
 // Created event listener
 document.getElementById("created").addEventListener("click", createdPop);
-// away event listener
