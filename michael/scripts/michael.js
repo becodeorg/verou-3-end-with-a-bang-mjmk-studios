@@ -3,6 +3,7 @@ import {
   makeJSClassPlusImg,
   makeJSElementPlusImg,
   setElementClass,
+  makeJSIdClassPlusImg
 } from "./base-functions.js";
 
 
@@ -42,8 +43,8 @@ createDivUpperLeft.style.width = "200px"
 const getSearch = document.getElementById("search");
 console.log(getSearch);
 
- /*  const backgroundYay = document.createElement("div");
-  backgroundYay.appendChild(".carousel slide"); */
+/*  const backgroundYay = document.createElement("div");
+ backgroundYay.appendChild(".carousel slide"); */
 
 const submitButton = document.getElementById("search-button");
 console.log(submitButton);
@@ -52,14 +53,14 @@ makeJSElement("container", getBody);
 
 const holdContainer = document.getElementById("container")
 
-makeJSClassPlusImg("wallPaperBaby", holdContainer);
-makeJSClassPlusImg("wallPaperBaby",holdContainer);
-makeJSClassPlusImg("wallPaperBaby", holdContainer);
-makeJSClassPlusImg("wallPaperBaby", holdContainer);
-makeJSClassPlusImg("wallPaperBaby", holdContainer);
-makeJSClassPlusImg("wallPaperBaby", holdContainer);
-makeJSClassPlusImg("wallPaperBaby", holdContainer);
-makeJSClassPlusImg("wallPaperBaby", holdContainer);
+makeJSIdClassPlusImg("wallPaperOne", "wP", "WallpaperBaby", "wPOne", holdContainer);
+makeJSIdClassPlusImg("wallPaperTwo", "wP", "WallpaperBaby", "wPTwo", holdContainer);
+makeJSIdClassPlusImg("wallPaperThree", "wP", "WallpaperBaby", "wPThree", holdContainer);
+makeJSIdClassPlusImg("wallPaperFour", "wP", "WallpaperBaby", "wFour", holdContainer);
+makeJSIdClassPlusImg("wallPaperFive", "wP", "WallpaperBaby", "wPFive", holdContainer);
+makeJSIdClassPlusImg("wallPaperSix", "wP", "WallpaperBaby", "wPSix", holdContainer);
+makeJSIdClassPlusImg("wallPaperSeven", "wP", "WallpaperBaby", "wPSeven", holdContainer);
+makeJSIdClassPlusImg("wallPaperEight", "wP", "WallpaperBaby", "wPEight", holdContainer);
 
 holdContainer.style.display = "inline-grid";
 
@@ -93,7 +94,7 @@ getSearch.addEventListener('keypress', function (e) {
 const searchDisplay = () => {
   let x = document.querySelector("#byeByeCarousel");
   x.style.display = "none";
-  console.log (x);
+  console.log(x);
 }
 
 
@@ -129,9 +130,111 @@ const callAnimeOutThere = (finishedAnimeInput, getAnime) => {
       console.log(randomWallpaper);
       for (let i = 0; i < 8; i++) {
         let fetchWallpaper = data[0].wallpapers[i];
-        let x = document.querySelectorAll(".wallPaperBaby");
+        let x = document.querySelectorAll(".WallpaperBaby");
         console.log(x);
         x[i].setAttribute("src", fetchWallpaper);
+
+        const setWallPapers = () => {
+
+          const getWallPapersArray = document.getElementsByClassName("wP");
+          console.log(getWallPapersArray);
+          for (let i = 0; i < 8; i++) {
+            let x = getWallPapersArray[i];
+            x.style.paddingRight = "1rem";
+            x.style.paddingLeft = "1rem";
+            x.style.paddingTop = "1rem";
+            x.style.paddingBottom = "1rem";
+          }
+
+          let wp0 = document.getElementById("wallPaperOne");
+          console.log(wp0);
+
+          let Wp0 = document.getElementById("wPOne");
+          console.log(wPOne);
+          wp0.style.width = "20rem";
+          console.log(Wp0);
+          wp0.style.height = "20rem";
+          Wp0.style.width = "100%";
+          Wp0.style.height = "100%";
+
+          let wp1 = document.getElementById("wallPaperTwo");
+          console.log(wp0);
+
+          let Wp1 = document.getElementById("wPTwo");
+          console.log(wPOne);
+          wp1.style.width = "20rem";
+          console.log(Wp0);
+          wp1.style.height = "20rem";
+          Wp1.style.width = "100%";
+          Wp1.style.height = "100%";
+
+          let wp2 = document.getElementById("wallPaperThree");
+          console.log(wp2);
+
+          let Wp2 = document.getElementById("wPThree");
+          console.log(Wp2);
+          wp2.style.width = "20rem";
+          wp2.style.height = "20rem";
+          Wp2.style.width = "100%";
+          Wp2.style.height = "100%";
+
+          let wp3 = document.getElementById("wallPaperFour");
+          console.log(wp3);
+
+          let Wp3 = document.getElementById("wPFour");
+          console.log(Wp3);
+          wp3.style.width = "20rem";
+          wp3.style.height = "20rem";
+          Wp3.style.width = "100%";
+          Wp3.style.height = "100%";
+
+          let wp4 = document.getElementById("wallPaperFive");
+          console.log(wp4);
+
+          let Wp4 = document.getElementById("wPFive");
+          console.log(Wp4);
+          wp4.style.width = "20rem";
+          wp4.style.height = "20rem";
+          Wp4.style.width = "100%";
+          Wp4.style.height = "100%";
+
+          let wp5 = document.getElementById("wallPaperSix");
+          console.log(wp5);
+
+          let Wp5 = document.getElementById("wPSix");
+          console.log(Wp5);
+          wp5.style.width = "20rem";
+          wp5.style.height = "20rem";
+          Wp5.style.width = "100%";
+          Wp5.style.height = "100%";
+
+          let wp6 = document.getElementById("wallPaperSeven");
+          console.log(wp6);
+
+          let Wp6 = document.getElementById("wPSeven");
+          console.log(Wp6);
+          wp6.style.width = "20rem";
+          wp6.style.height = "20rem";
+          Wp6.style.width = "100%";
+          Wp6.style.height = "100%";
+
+          let wp7 = document.getElementById("wallPaperEight");
+          console.log(wp7);
+
+          let Wp7 = document.getElementById("wPEight");
+          console.log(Wp7);
+          wp7.style.width = "20rem";
+          wp7.style.height = "20rem";
+          Wp7.style.width = "100%";
+          Wp7.style.height = "100%";
+        }
+
+        setWallPapers();
+
+
+
+
+
       };
 
       // hier nog iets doen met die data
@@ -141,14 +244,14 @@ const callAnimeOutThere = (finishedAnimeInput, getAnime) => {
       console.error(err);
       makeJSElement("failureNotification", getBody);
       const notifyFailure = document.getElementById("failureNotification");
-      notifyFailure.style.display ="none"
+      notifyFailure.style.display = "none"
       notifyFailure.innerHTML = `Hi, We're sorry -- - -- but we don't have wallpapers for ${getAnime}; We don't have every manga around ;-(, try another.</>
 <b> small tip: </b> Try to search for the full name of the manga. `;
     });
 };
 
 
-callAnimeOutThere();
+/* callAnimeOutThere(); */
 
 const getAnimeRllyOutThere = () => {
 
@@ -186,10 +289,11 @@ const getAnimeRllyOutThere = () => {
 
 
 /* TODO: 
-1. Add navigation links & buttons
 1.a. fix grid
-2. add code to also fix for some cases where -wallpaper is appropriate
-3. style */
+2a. fix warning if no return on input search
+2aa. fix + wallpaper (idea: just search for both and add a few lines)
+2b. responsiveness
+3. style/ hover fx and such*/
 
 
 
