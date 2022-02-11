@@ -5,7 +5,12 @@ const makeJSElementPlusImg = (attribute, parent) => {
     x.appendChild(y);
     parent.appendChild(x);
 }
-
+const setElementClass = (element, cssClass) => {
+    let x = document.querySelectorAll(element);
+    console.log(x);
+    for (let i = 0; i < x.length ; i++) {
+    x[i].classList.add(cssClass); }
+}
 
 const makeJSElement = (attribute, parent) => {
     const x = document.createElement("div");
@@ -65,37 +70,18 @@ const getAnimeWallpaper = (event) => {
   }
   
 
-/* const styleNotifyFailure = (id, property0, property1, property2, property3, property4, property5, property6, property7) => {
+/* const styleNotifyFailure = (id, parameter0, parameter1, parameter2, parameter3, parameter4, parameter5, parameter6, parameter7) => {
  const x = document.getElementById(id);
- x.style.property0 = backgroundColor;
-x.style.property1 = position;
-x.style.property2 = bottom;
-x.style.property3 = padding
-x.style.property4 = borderRadius;
-x.style.property5 = color;
-x.style.property6 = boxShadow;
-x.style.property7 = textShadow,
-}; */
-
-
-
-function gimmeValue(getAnime) {
-    makeJSElement("failureNotification", getBody);
-    const notifyFailure = document.getElementById("failureNotification");
-    notifyFailure.innerHTML = `Hi, We're sorry -- - -- but we don't have wallpapers for ${getAnime}; We don't have every manga around ;-(, try another.</br>
-<b> small tip: </b> Try to search for the full name of the manga. `;
-    notifyFailure.style.backgroundColor = "#5d5fef";
-    notifyFailure.style.position = "absolute";
-    notifyFailure.style.bottom = "40rem";
-    notifyFailure.style.padding = "10rem 2rem 1rem 2rem";
-    notifyFailure.style.borderRadius = "1rem";
-    notifyFailure.style.color = "#a5a6f6";
-    notifyFailure.style.boxShadow = "10px 5px 5px";
-    notifyFailure.style.textShadow = "1px 0.5px white";
-
-}
-
-gimmeValue();
+ x.style.parameter0 = backgroundColor;
+x.style.parameter1 = position;
+x.style.parameter2 = bottom;
+x.style.parameter3 = padding
+x.style.parameter4 = borderRadius;
+x.style.parameter5 = color;
+x.style.parameter6 = boxShadow;
+x.style.parameter7 = textShadow,
+};
+ */
 
 
 
@@ -108,4 +94,4 @@ getSearch.addEventListener('keypress', function (e) {
 
 
 
-export {makeJSElement, makeJSElementPlusImg}  ;
+export {makeJSElement, makeJSElementPlusImg};
