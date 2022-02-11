@@ -411,6 +411,32 @@ const commandStart = (command) => {
         roomBox.insertBefore(help, roomBox.firstChild);
     }
 }
+// start pop
+const startPop = () => {
+    const popB = (document.getElementById("startPop").style.display == "none");
+    if (popB) {
+        document.getElementById("startPop").style.display = "block";
+        console.log("block");
+    }
+    else {
+        document.getElementById("startPop").style.display = "none";
+        document.getElementById("createdPop").style.display = "none";
+        console.log("none");
+    }
+}
+// created pop
+const createdPop = () => {
+    const popC = (document.getElementById("createdPop").style.display == "none");
+    console.log("jep");
+    if (popC) {
+        document.getElementById("createdPop").style.display = "block";
+        console.log("block");
+    }
+    else {
+        document.getElementById("createdPop").style.display = "none";
+        console.log("none");
+    }
+}
 // submit button event listener
 document.getElementById("submit").addEventListener("click", readInput);
 document.addEventListener('keypress', function (e) {
@@ -418,3 +444,7 @@ document.addEventListener('keypress', function (e) {
         readInput();
     }
 })
+// Start event listener
+document.getElementById("start").addEventListener("click", startPop);
+// Created event listener
+document.getElementById("created").addEventListener("click", createdPop);

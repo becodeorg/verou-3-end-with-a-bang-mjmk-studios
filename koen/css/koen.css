@@ -41,7 +41,7 @@ body main #desktop #desktopmain #icons div {
   margin-bottom: 3vh;
 }
 
-body main #desktop #desktopmain #icons a {
+body main #desktop #desktopmain #icons .icons {
   display: block;
   margin-bottom: 3vh;
 }
@@ -154,9 +154,11 @@ body main #desktop #desktopmain #boxBox #contentBox #inputBox #submit {
 
 body main #desktop #taskbar {
   background-color: #C0C0C0;
+  border-top: 1px solid black;
 }
 
-body main #desktop #taskbar img {
+body main #desktop #taskbar div #start {
+  cursor: pointer;
   display: block;
   margin: auto;
   margin-left: 2px;
@@ -164,6 +166,96 @@ body main #desktop #taskbar img {
 
 body .hint {
   color: green;
+}
+
+body #startPop {
+  display: none;
+  position: fixed;
+  bottom: 29px;
+  width: 150px;
+  height: 200px;
+  background-color: #C0C0C0;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+}
+
+body #startPop #startContent {
+  margin-left: 5px;
+}
+
+body #startPop #startContent #mainContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 5px;
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+}
+
+body #startPop #startContent #mainContent #mainImg {
+  margin-right: 5px;
+}
+
+body #startPop #startContent #created {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+body #startPop #startContent #created #createdImg {
+  margin-right: 5px;
+}
+
+body #startPop #startContent #created:hover {
+  background-color: #0009b0;
+}
+
+body #startPop #startContent #created:hover p {
+  color: white;
+}
+
+body #startPop #startContent a:hover {
+  background-color: #0009b0;
+}
+
+body #startPop #startContent a:hover p {
+  color: white;
+}
+
+body #createdPop {
+  display: block;
+  position: fixed;
+  bottom: 80px;
+  left: 150px;
+  width: 150px;
+  height: 120px;
+  background-color: #C0C0C0;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+body #createdPop a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 5px;
+  margin-top: 5px;
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+}
+
+body #createdPop a img {
+  margin-right: 5px;
+}
+
+body #createdPop a:hover {
+  background-color: #0009b0;
+  color: white;
 }
 
 @media only screen and (max-width: 600px) {
