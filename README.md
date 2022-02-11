@@ -19,6 +19,12 @@ A place where you relax, chill and procrastinate. Play games, listen to music, r
 
 - Press Start 2P - <https://fonts.google.com/specimen/Press+Start+2P#standard-styles>
 
+## CSS + Framework
+
+Bootstrap v5.1.3 is used for general styling. The colors of primary and secondary buttons are overridden to adjust it to the project theme (iris/orange). The footer and buttons are premade by Muhammet in components.html for everyone's use.
+
+Instead of plain CSS, Sass is used to improve speed and stability. Color variables are stored in seperate .scss file. Sass files support mobile responsiveness with media queries.
+
 ## Github repositories
 
 - [x] Muhammet <https://github.com/Muhammetacin>

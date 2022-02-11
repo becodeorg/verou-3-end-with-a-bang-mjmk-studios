@@ -1,3 +1,11 @@
+import {
+  makeJSElement,
+  makeJSClassPlusImg,
+  makeJSElementPlusImg,
+  setElementClass,
+} from "./base-functions.js";
+
+
 const getBody = document.querySelector("body");
 console.log(getBody);
 
@@ -8,35 +16,55 @@ getBody.appendChild(createDiv);
 console.log(createDiv);
 let randomWall = "https://wallpapercave.com/wp/wp1809893.jpg";
 /* createDiv.style.backgroundImage = "url(" + randomWall + ")"; */
-createDiv.style.height ="400px";
+createDiv.style.height = "400px";
 createDiv.style.width = "200px";
 
-const createFirstImg = document.createElement("img");
+/* const createFirstImg = document.createElement("img");
 createFirstImg.classList.add("img-one");
 createDiv.appendChild(createFirstImg);
 createFirstImg.style.maxHeight = "100%";
 createFirstImg.style.maxWidth = "100%";
-createFirstImg.style.height ="400px";
+createFirstImg.style.height = "400px";
 createFirstImg.style.width = "200px";
 /* createFirstImg.src = randomWall; */
 
 
-const createDivUpperLeft = document.createElement("div");
+/* const createDivUpperLeft = document.createElement("div");
 createDivUpperLeft.classList.add("API-container-two");
 getBody.appendChild(createDivUpperLeft);
 createDivUpperLeft.style.backgroundImage = "url(" + randomWall + ")";
 createDivUpperLeft.style.height = "100px"
 createDivUpperLeft.style.width = "200px"
 
+ */
 
 
 const getSearch = document.getElementById("search");
 console.log(getSearch);
 
-
+ /*  const backgroundYay = document.createElement("div");
+  backgroundYay.appendChild(".carousel slide"); */
 
 const submitButton = document.getElementById("search-button");
 console.log(submitButton);
+
+makeJSElement("container", getBody);
+
+const holdContainer = document.getElementById("container")
+
+makeJSClassPlusImg("wallPaperBaby", holdContainer);
+makeJSClassPlusImg("wallPaperBaby",holdContainer);
+makeJSClassPlusImg("wallPaperBaby", holdContainer);
+makeJSClassPlusImg("wallPaperBaby", holdContainer);
+makeJSClassPlusImg("wallPaperBaby", holdContainer);
+makeJSClassPlusImg("wallPaperBaby", holdContainer);
+makeJSClassPlusImg("wallPaperBaby", holdContainer);
+makeJSClassPlusImg("wallPaperBaby", holdContainer);
+
+holdContainer.style.display = "inline-grid";
+
+
+
 
 
 let finishedAnimeInput;
@@ -45,19 +73,44 @@ const getAnimeWallpaper = (event) => {
   let getAnime = getSearch.value.toLowerCase();
   getAnime = getAnime.replace(/\s+/g, "-");
   finishedAnimeInput = getAnime + "-wallpapers";
-  callAnimeOutThere(finishedAnimeInput);
-  
+  callAnimeOutThere(finishedAnimeInput, getAnime);
+  getAnimeRllyOutThere(finishedAnimeInput);
+  gimmeValue(getAnime);
 }
 
 
-submitButton.addEventListener('click', getAnimeWallpaper);
-    getSearch.addEventListener('keypress', function (e) {
-      if (e.code === 'Enter') {
-        getAnimeWallpaper(e);
-      }
-    });
+const gimmeValue = (getAnime) => {
+  return getAnime;
+}
 
-const callAnimeOutThere = (finishedAnimeInput) => {
+submitButton.addEventListener('click', getAnimeWallpaper);
+getSearch.addEventListener('keypress', function (e) {
+  if (e.code === 'Enter') {
+    getAnimeWallpaper(e);
+  }
+});
+
+const searchDisplay = () => {
+  let x = document.querySelector("#byeByeCarousel");
+  x.style.display = "none";
+  console.log (x);
+}
+
+
+
+
+submitButton.addEventListener('click', searchDisplay);
+getSearch.addEventListener('keypress', function (e) {
+  if (e.code === 'Enter') {
+    searchDisplay(e);
+  }
+});
+
+
+
+
+
+const callAnimeOutThere = (finishedAnimeInput, getAnime) => {
 
 
 
@@ -65,28 +118,80 @@ const callAnimeOutThere = (finishedAnimeInput) => {
       "method": "GET",
       "headers": {
         "x-rapidapi-host": "yume-anime-wallpapers.p.rapidapi.com",
-        "x-rapidapi-key": "e1fc11060emsh56e7368925313f9p1174d1jsn3e6d83911114"
+        "x-rapidapi-key": "7c7087b974mshbf48bda2f96d4f1p19b22cjsnd56c104c91f2"
       }
     })
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-     console.log (data[0].wallpapers);
-       const randomWallpaper = data[0].wallpapers[Math.floor(Math.random()*data[0].wallpapers.length)];
-      console.log (randomWallpaper); 
-     createFirstImg.src = randomWallpaper;
-      
-     
+      console.log(data[0].wallpapers);
+      const randomWallpaper = data[0].wallpapers[Math.floor(Math.random() * data[0].wallpapers.length)];
+      console.log(randomWallpaper);
+      for (let i = 0; i < 8; i++) {
+        let fetchWallpaper = data[0].wallpapers[i];
+        let x = document.querySelectorAll(".wallPaperBaby");
+        console.log(x);
+        x[i].setAttribute("src", fetchWallpaper);
+      };
+
       // hier nog iets doen met die data
 
     })
     .catch(err => {
       console.error(err);
+      makeJSElement("failureNotification", getBody);
+      const notifyFailure = document.getElementById("failureNotification");
+      notifyFailure.style.display ="none"
+      notifyFailure.innerHTML = `Hi, We're sorry -- - -- but we don't have wallpapers for ${getAnime}; We don't have every manga around ;-(, try another.</>
+<b> small tip: </b> Try to search for the full name of the manga. `;
     });
 };
 
 
 callAnimeOutThere();
+
+const getAnimeRllyOutThere = () => {
+
+  fetch("https://yume-anime-wallpapers.p.rapidapi.com/manga_anime?slug=one-punch-man-wallpapers", {
+      "method": "GET",
+      "headers": {
+        "x-rapidapi-host": "yume-anime-wallpapers.p.rapidapi.com",
+        "x-rapidapi-key": "7c7087b974mshbf48bda2f96d4f1p19b22cjsnd56c104c91f2"
+      }
+    })
+    .then(response => response.json())
+    .then((data) => {
+      console.log(data);
+      const randomWallpaper = data[0].wallpapers[Math.floor(Math.random() * data[0].wallpapers.length)];
+      console.log(randomWallpaper);
+
+
+      for (let i = 0; i < 6; i++) {
+        let fetchWallpaper = data[0].wallpapers[i];
+        let x = document.getElementsByClassName("carouselItem");
+        console.log(x);
+        x[i].setAttribute("src", fetchWallpaper);
+      };
+    })
+    .catch(err => {
+      console.error(err);
+    });
+}
+
+/* getAnimeRllyOutThere(); */
+
+
+
+
+
+
+/* TODO: 
+1. Add navigation links & buttons
+1.a. fix grid
+2. add code to also fix for some cases where -wallpaper is appropriate
+3. style */
+
+
 
 
 /* fetch("https://yume-anime-wallpapers.p.rapidapi.com/manga_anime", {
@@ -117,16 +222,16 @@ callAnimeOutThere();
 
 
 
-    //TODO: add the additional values to the searched string
+//TODO: add the additional values to the searched string
 
 
 
-    /* function wallpaperChanger(data, getAnime) {
-      console.log(getAnime);
-      if (data.indexOf(getAnime) !== -1) {
-        console.log ("chicken");
-      }
-    } */
+/* function wallpaperChanger(data, getAnime) {
+  console.log(getAnime);
+  if (data.indexOf(getAnime) !== -1) {
+    console.log ("chicken");
+  }
+} */
 
-    
-    // TODO: write a function that takes the data from the searchbar and puts it in the API
+
+// TODO: write a function that takes the data from the searchbar and puts it in the API

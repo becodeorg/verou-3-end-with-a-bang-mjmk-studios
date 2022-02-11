@@ -1,3 +1,7 @@
+.navbar {
+  z-index: 10;
+}
+
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -47,5 +51,31 @@ input {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.footer {
+  background-color: #5d5fef;
+}
+
+.footer p a {
+  color: #ffc107;
+}
+
+.btn-primary {
+  position: absolute;
+  display: inline-block;
+  bottom: 3rem;
+  left: 6rem;
+}
+
+.btn-secondary {
+  position: absolute;
+  display: inline-block;
+  bottom: 3rem;
+  left: 0rem;
+}
+
+.dropdown-toggle {
+  color: #ffc107;
 }
 /*# sourceMappingURL=michael.css.map */

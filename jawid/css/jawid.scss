@@ -43,7 +43,7 @@ header {
 }
 .wrapper {
   border: 1px solid transparent;
-  padding: 20px;
+  padding: 20px 80px;
   background-image: linear-gradient(red, yellow, green);
   border-radius: 15px;
   box-shadow: rgba(46, 45, 45, 0.3) 0px 19px 38px,
@@ -105,6 +105,7 @@ header {
 .prev-track:hover,
 .next-track:hover {
   opacity: 1;
+  color: rgb(223, 219, 219);
 }
 .slider_container {
   display: flex;
@@ -159,7 +160,7 @@ i.fa-step-backward {
   cursor: pointer;
 }
 .randomActive {
-  color: black;
+  color: rgb(250, 3, 3);
 }
 .rotate {
   animation: rotation 8s infinite linear;
@@ -266,10 +267,14 @@ footer {
   }
   .wrapper {
     margin: 0;
+    padding: 10px 20px;
     width: 100%;
     border-radius: 0%;
   }
   #group-members {
     display: none;
+  }
+  body {
+    background-image: none;
   }
 }
