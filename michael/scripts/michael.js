@@ -10,41 +10,10 @@ import {
 const getBody = document.querySelector("body");
 console.log(getBody);
 
-const createDiv = document.createElement("div");
-createDiv.classList.add("API-container-one");
-getBody.appendChild(createDiv);
-
-console.log(createDiv);
-let randomWall = "https://wallpapercave.com/wp/wp1809893.jpg";
-/* createDiv.style.backgroundImage = "url(" + randomWall + ")"; */
-createDiv.style.height = "400px";
-createDiv.style.width = "200px";
-
-/* const createFirstImg = document.createElement("img");
-createFirstImg.classList.add("img-one");
-createDiv.appendChild(createFirstImg);
-createFirstImg.style.maxHeight = "100%";
-createFirstImg.style.maxWidth = "100%";
-createFirstImg.style.height = "400px";
-createFirstImg.style.width = "200px";
-/* createFirstImg.src = randomWall; */
-
-
-/* const createDivUpperLeft = document.createElement("div");
-createDivUpperLeft.classList.add("API-container-two");
-getBody.appendChild(createDivUpperLeft);
-createDivUpperLeft.style.backgroundImage = "url(" + randomWall + ")";
-createDivUpperLeft.style.height = "100px"
-createDivUpperLeft.style.width = "200px"
-
- */
-
 
 const getSearch = document.getElementById("search");
 console.log(getSearch);
 
-/*  const backgroundYay = document.createElement("div");
- backgroundYay.appendChild(".carousel slide"); */
 
 const submitButton = document.getElementById("search-button");
 console.log(submitButton);
@@ -56,7 +25,7 @@ const holdContainer = document.getElementById("container")
 makeJSIdClassPlusImg("wallPaperOne", "wP", "WallpaperBaby", "wPOne", holdContainer);
 makeJSIdClassPlusImg("wallPaperTwo", "wP", "WallpaperBaby", "wPTwo", holdContainer);
 makeJSIdClassPlusImg("wallPaperThree", "wP", "WallpaperBaby", "wPThree", holdContainer);
-makeJSIdClassPlusImg("wallPaperFour", "wP", "WallpaperBaby", "wFour", holdContainer);
+makeJSIdClassPlusImg("wallPaperFour", "wP", "WallpaperBaby", "wPFour", holdContainer);
 makeJSIdClassPlusImg("wallPaperFive", "wP", "WallpaperBaby", "wPFive", holdContainer);
 makeJSIdClassPlusImg("wallPaperSix", "wP", "WallpaperBaby", "wPSix", holdContainer);
 makeJSIdClassPlusImg("wallPaperSeven", "wP", "WallpaperBaby", "wPSeven", holdContainer);
@@ -140,10 +109,7 @@ const callAnimeOutThere = (finishedAnimeInput, getAnime) => {
           console.log(getWallPapersArray);
           for (let i = 0; i < 8; i++) {
             let x = getWallPapersArray[i];
-            x.style.paddingRight = "1rem";
-            x.style.paddingLeft = "1rem";
-            x.style.paddingTop = "1rem";
-            x.style.paddingBottom = "1rem";
+            x.classList.add("wPBig");
           }
 
           let wp0 = document.getElementById("wallPaperOne");
@@ -242,16 +208,23 @@ const callAnimeOutThere = (finishedAnimeInput, getAnime) => {
     })
     .catch(err => {
       console.error(err);
+      const takeSearch = document.getElementsByClassName("form-container");
+      makeJSElement("failureNotification", takeSearch[0]);
       makeJSElement("failureNotification", getBody);
       const notifyFailure = document.getElementById("failureNotification");
-      notifyFailure.style.display = "none"
       notifyFailure.innerHTML = `Hi, We're sorry -- - -- but we don't have wallpapers for ${getAnime}; We don't have every manga around ;-(, try another.</>
 <b> small tip: </b> Try to search for the full name of the manga. `;
+      notifyFailure.style.backgroundColor = "#5d5fef";
+      notifyFailure.style.position = "absolute";
+      notifyFailure.style.bottom = "40rem";
+      notifyFailure.style.padding = "10rem 2rem 1rem 2rem";
+      notifyFailure.style.borderRadius = "1rem";
+      notifyFailure.style.color = "#a5a6f6";
+      notifyFailure.style.boxShadow = "10px 5px 5px";
+      notifyFailure.style.textShadow = "1px 0.5px white";
     });
 };
 
-
-/* callAnimeOutThere(); */
 
 const getAnimeRllyOutThere = () => {
 
@@ -289,11 +262,11 @@ const getAnimeRllyOutThere = () => {
 
 
 /* TODO: 
-1.a. fix grid
-2a. fix warning if no return on input search
-2aa. fix + wallpaper (idea: just search for both and add a few lines)
-2b. responsiveness
-3. style/ hover fx and such*/
+1a. fix searchbar/carousel overlap
+1. fix + wallpaper addition, so that it also calls for that
+2. style/ hover fx and such
+3. get randomWp for carousel
+*/
 
 
 

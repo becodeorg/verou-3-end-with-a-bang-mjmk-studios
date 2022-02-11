@@ -54,10 +54,7 @@ const getWallPapersArray = document.getElementsByClassName("wP");
 console.log (getWallPapersArray);
           for (let i = 0; i < 8; i++ ) {
             let x = getWallPapersArray[i];
-           x.style.paddingRight ="1rem";
-           x.style.paddingLeft ="1rem";
-           x.style.paddingTop ="1rem";
-           x.style.paddingBottom ="1rem";
+           x.classList.add("wPBig");
           }
 
 
@@ -142,3 +139,17 @@ wp7.style.width="20rem";
 wp7.style.height="20rem";
 Wp7.style.width = "100%";
 Wp7.style.height = "100%";
+
+const takeSearch = document.getElementsByClassName("form-container");
+makeJSElement("failureNotification", takeSearch[0]);
+      const notifyFailure = document.getElementById("failureNotification");
+      notifyFailure.innerHTML = `Hi, We're sorry -- - -- but we don't have wallpapers for naruto; We don't have every manga around ;-(, try another.</>
+<b> small tip: </b> Try to search for the full name of the manga. `;
+notifyFailure.style.backgroundColor = "#5d5fef";
+    notifyFailure.style.position = "relative";
+    notifyFailure.style.padding = "1rem 2rem 1rem 2rem";
+    notifyFailure.style.borderRadius = "1rem";
+    notifyFailure.style.color = "#a5a6f6";
+    notifyFailure.style.boxShadow = "10px 5px 5px";
+    notifyFailure.style.textShadow = "1px 0.5px white";
+    notifyFailure.style.display = "none";
