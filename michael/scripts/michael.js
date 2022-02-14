@@ -73,7 +73,7 @@ const giveCarousel = (slug, i) => { // we need to get the slug here! not the arr
     });
 }
 
-
+testCarousel();
 
 
 const getBody = document.querySelector("body");
